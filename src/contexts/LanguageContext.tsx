@@ -40,7 +40,7 @@ const translations = {
     consultingItems: ['Аудит', 'Маркетинг-сесія (разом стратегуємо)', 'Рішення і рекомендації'],
     
     // General
-    siteName: 'No_Name_Agency'
+    siteName: 'Your_Name_Agency'
   },
   en: {
     // Navigation
@@ -72,7 +72,7 @@ const translations = {
     consultingItems: ['Audit', 'Marketing Session (strategizing together)', 'Solutions & Recommendations'],
     
     // General
-    siteName: 'No_Name_Agency'
+    siteName: 'Your_Name_Agency'
   }
 };
 
