@@ -1,14 +1,18 @@
 import { Button } from "./ui/button";
+import { useLanguage } from "../contexts/LanguageContext";
+
 const Contact = () => {
+  const { t } = useLanguage();
+  
   return <section id="contact" className="py-20 px-4 bg-muted">
       <div className="container mx-auto max-w-4xl text-center">
         <div className="slide-up">
           <h2 className="text-3xl md:text-4xl font-light mb-6 text-foreground">
-            Готові почати?
+            {t('contactTitle')}
           </h2>
           
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Розкажіть нам про свій проект, і ми знайдемо найпростіше рішення
+            {t('contactSubtitle')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">

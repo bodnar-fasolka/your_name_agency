@@ -7,6 +7,34 @@ const Footer = () => {
             Your_Name_Agency
           </div>
           
+          {/* Social Media Links */}
+          <div className="flex gap-4 mb-4 md:mb-0">
+            <a 
+              href="https://www.linkedin.com/company/108591652/admin/dashboard/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors duration-300"
+            >
+              <img src="/linkedin.svg" alt="LinkedIn" className="w-5 h-5" />
+            </a>
+            <a 
+              href="https://www.instagram.com/your_n_agency/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors duration-300"
+            >
+              <img src="/instagram.svg" alt="Instagram" className="w-5 h-5" />
+            </a>
+            <a 
+              href="https://www.threads.com/@your_n_agency?igshid=NTc4MTIwNjQ2YQ==" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors duration-300"
+            >
+              <img src="/threads.svg" alt="Threads" className="w-5 h-5" />
+            </a>
+          </div>
+          
           <div className="text-sm text-muted-foreground">
             © 2024 Your_Name_Agency
           </div>

@@ -1,10 +1,14 @@
+import { useLanguage } from "../contexts/LanguageContext";
+
 const Team = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="team" className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 slide-up">
           <h2 className="text-3xl md:text-4xl font-light mb-4 text-foreground">
-            Team
+            {t('teamTitle')}
           </h2>
         </div>
         
@@ -19,14 +23,14 @@ const Team = () => {
               />
             </div>
             <h3 className="text-xl font-medium mb-4 text-foreground">
-              Соломія Боднар
+              {t('solomiyaName')}
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Маркетологиня з досвідом запуску продуктів і розвитку брендів у B2B, B2C та IT-сферах.
+              {t('solomiyaDescription')}
             </p>
             <div className="flex justify-center gap-4">
               <a 
-                href="https://www.linkedin.com/company/108591652/admin/dashboard/" 
+                href="https://www.linkedin.com/in/solka-bodnar-373ab9201/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors duration-300"
@@ -54,10 +58,10 @@ const Team = () => {
               />
             </div>
             <h3 className="text-xl font-medium mb-4 text-foreground">
-              Ірина Перів
+              {t('irynaName')}
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Юристка, підприємиця, громадська активістка, науковиця, дослідниця жіночої історії, менторка громад, ґендерна експертка.
+              {t('irynaDescription')}
             </p>
             <div className="flex justify-center gap-4">
               <a 
