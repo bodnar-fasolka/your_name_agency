@@ -21,9 +21,27 @@ const Team = () => {
             <h3 className="text-xl font-medium mb-4 text-foreground">
               Соломія Боднар
             </h3>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed mb-6">
               Маркетологиня з досвідом запуску продуктів і розвитку брендів у B2B, B2C та IT-сферах.
             </p>
+            <div className="flex justify-center gap-4">
+              <a 
+                href="https://www.linkedin.com/company/108591652/admin/dashboard/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors duration-300"
+              >
+                <img src="/linkedin.svg" alt="LinkedIn" className="w-6 h-6" />
+              </a>
+              <a 
+                href="https://www.instagram.com/sol.fasolka/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors duration-300"
+              >
+                <img src="/instagram.svg" alt="Instagram" className="w-6 h-6" />
+              </a>
+            </div>
           </div>
 
           {/* Ірина Перів */}
@@ -38,9 +56,27 @@ const Team = () => {
             <h3 className="text-xl font-medium mb-4 text-foreground">
               Ірина Перів
             </h3>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed mb-6">
               Юристка, підприємиця, громадська активістка, науковиця, дослідниця жіночої історії, менторка громад, ґендерна експертка.
             </p>
+            <div className="flex justify-center gap-4">
+              <a 
+                href="https://www.linkedin.com/in/iryna-periv-752b81329/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors duration-300"
+              >
+                <img src="/linkedin.svg" alt="LinkedIn" className="w-6 h-6" />
+              </a>
+              <a 
+                href="https://www.instagram.com/irynaperiv/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-muted hover:bg-muted/80 transition-colors duration-300"
+              >
+                <img src="/instagram.svg" alt="Instagram" className="w-6 h-6" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
