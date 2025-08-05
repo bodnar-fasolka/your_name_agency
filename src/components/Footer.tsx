@@ -4,11 +4,11 @@ const Footer = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="font-bold text-xl text-foreground mb-4 md:mb-0">
-            No_Name_Agency
+            Your_Name_Agency
           </div>
           
           <div className="text-sm text-muted-foreground">
-            © 2024 No_Name_Agency
+            © 2024 Your_Name_Agency
           </div>
         </div>
       </div>
