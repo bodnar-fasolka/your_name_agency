@@ -11,3 +11,6 @@ this will update code on git hub and update the website
 
 npm run dev 
 will run your site localy
+
+BEFORE WORK!!!!
+git pull
