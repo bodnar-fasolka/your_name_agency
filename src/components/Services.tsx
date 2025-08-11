@@ -40,6 +40,7 @@ const Services = () => {
           </h2>
         </div>
         
+        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {services.map((service, index) => (
             <div 
