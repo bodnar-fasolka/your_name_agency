@@ -20,6 +20,7 @@ const Team = () => {
                 src="/solomiya.jpg" 
                 alt="Соломія Боднар" 
                 className="w-64 h-64 mx-auto rounded-lg object-cover shadow-lg hover:shadow-xl transition-shadow duration-300"
+                loading="lazy"
               />
             </div>
             <h3 className="text-xl font-medium mb-4 text-foreground">
@@ -55,6 +56,7 @@ const Team = () => {
                 src="/iryna.jpg" 
                 alt="Ірина Перів" 
                 className="w-64 h-64 mx-auto rounded-lg object-cover shadow-lg hover:shadow-xl transition-shadow duration-300"
+                loading="lazy"
               />
             </div>
             <h3 className="text-xl font-medium mb-4 text-foreground">
