@@ -16,12 +16,28 @@ const Team = () => {
           {/* Соломія Боднар */}
           <div className="text-center slide-up">
             <div className="mb-6">
-              <img 
-                src="/solomiya.jpg" 
-                alt="Соломія Боднар" 
-                className="w-64 h-64 mx-auto rounded-lg object-cover shadow-lg hover:shadow-xl transition-shadow duration-300"
-                loading="lazy"
-              />
+              <picture>
+                <source 
+                  srcSet="/optimized/solomiya-256.avif 256w, /optimized/solomiya-512.avif 512w"
+                  sizes="(max-width: 768px) 256px, 256px"
+                  type="image/avif"
+                />
+                <source 
+                  srcSet="/optimized/solomiya-256.webp 256w, /optimized/solomiya-512.webp 512w"
+                  sizes="(max-width: 768px) 256px, 256px"
+                  type="image/webp"
+                />
+                <img 
+                  src="/optimized/solomiya-256.jpg"
+                  srcSet="/optimized/solomiya-256.jpg 256w, /optimized/solomiya-512.jpg 512w"
+                  sizes="(max-width: 768px) 256px, 256px"
+                  alt={t('solomiyaName')}
+                  width="256"
+                  height="256"
+                  loading="lazy"
+                  className="w-64 h-64 mx-auto rounded-lg object-cover shadow-lg hover:shadow-xl transition-shadow duration-300"
+                />
+              </picture>
             </div>
             <h3 className="text-xl font-medium mb-4 text-foreground">
               {t('solomiyaName')}
@@ -52,12 +68,28 @@ const Team = () => {
           {/* Ірина Перів */}
           <div className="text-center slide-up" style={{ animationDelay: '0.2s' }}>
             <div className="mb-6">
-              <img 
-                src="/iryna.jpg" 
-                alt="Ірина Перів" 
-                className="w-64 h-64 mx-auto rounded-lg object-cover shadow-lg hover:shadow-xl transition-shadow duration-300"
-                loading="lazy"
-              />
+              <picture>
+                <source 
+                  srcSet="/optimized/iryna-256.avif 256w, /optimized/iryna-512.avif 512w"
+                  sizes="(max-width: 768px) 256px, 256px"
+                  type="image/avif"
+                />
+                <source 
+                  srcSet="/optimized/iryna-256.webp 256w, /optimized/iryna-512.webp 512w"
+                  sizes="(max-width: 768px) 256px, 256px"
+                  type="image/webp"
+                />
+                <img 
+                  src="/optimized/iryna-256.jpg"
+                  srcSet="/optimized/iryna-256.jpg 256w, /optimized/iryna-512.jpg 512w"
+                  sizes="(max-width: 768px) 256px, 256px"
+                  alt={t('irynaName')}
+                  width="256"
+                  height="256"
+                  loading="lazy"
+                  className="w-64 h-64 mx-auto rounded-lg object-cover shadow-lg hover:shadow-xl transition-shadow duration-300"
+                />
+              </picture>
             </div>
             <h3 className="text-xl font-medium mb-4 text-foreground">
               {t('irynaName')}

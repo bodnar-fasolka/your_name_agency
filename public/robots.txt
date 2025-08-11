@@ -1,14 +1,10 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
 User-agent: *
 Allow: /
+
+# Sitemap
+Sitemap: https://www.your-name.agency/sitemap.xml
+
+# Block crawling of admin/development files
+Disallow: /admin/
+Disallow: /.env
+Disallow: /node_modules/
