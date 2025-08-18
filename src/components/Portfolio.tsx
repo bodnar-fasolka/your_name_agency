@@ -1,4 +1,7 @@
 import { useLanguage } from "../contexts/LanguageContext";
+import { Button } from "./ui/button";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   const { t } = useLanguage();
@@ -60,6 +63,16 @@ const Portfolio = () => {
               </div>
             </div>
           ))}
+        </div>
+        
+        {/* Call to Action */}
+        <div className="text-center mt-12 slide-up">
+          <Button variant="outline" size="lg" asChild className="group">
+            <Link to="/cases" className="inline-flex items-center gap-2">
+              {t('viewAllCases')}
+              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

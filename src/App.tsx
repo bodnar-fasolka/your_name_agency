@@ -7,9 +7,11 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 import { HelmetProvider } from 'react-helmet-async';
 import { Suspense, lazy } from "react";
 
-// Lazy load pages for better performance
-const Index = lazy(() => import("./pages/Index"));
-const NotFound = lazy(() => import("./pages/NotFound"));
+// Lazy load components for better performance
+const Index = lazy(() => import('./pages/Index'));
+const NotFound = lazy(() => import('./pages/NotFound'));
+const Cases = lazy(() => import('./pages/Cases'));
+const CaseFourface = lazy(() => import('./pages/CaseFourface'));
 
 // Loading component
 const PageLoader = () => (
@@ -38,6 +40,8 @@ const App = () => (
             <Suspense fallback={<PageLoader />}>
               <Routes>
                 <Route path="/" element={<Index />} />
+                <Route path="/cases" element={<Cases />} />
+                <Route path="/cases/4face" element={<CaseFourface />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>

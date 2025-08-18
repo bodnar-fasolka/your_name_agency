@@ -48,6 +48,7 @@ const translations = {
     
     // Portfolio
     portfolioTitle: 'Кейси',
+    viewAllCases: 'Дивитися всі кейси',
     caseLabel: 'Кейс:',
     requestLabel: 'Запит:',
     resultLabel: 'Результат:',
@@ -109,6 +110,7 @@ const translations = {
     
     // Portfolio
     portfolioTitle: 'Cases',
+    viewAllCases: 'View All Cases',
     caseLabel: 'Case:',
     requestLabel: 'Request:',
     resultLabel: 'Result:',
