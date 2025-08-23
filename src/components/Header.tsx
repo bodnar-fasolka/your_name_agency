@@ -42,8 +42,10 @@ const Header = () => {
               </span>
             </Button>
             
-            <Button variant="outline" className="hidden md:block">
-              {t('contactUs')}
+            <Button size="sm" asChild>
+              <a href="https://calendly.com/bodnar-solomiya-v/30min" target="_blank" rel="noopener noreferrer">
+                {t('contactUs')}
+              </a>
             </Button>
           </div>
         </div>
