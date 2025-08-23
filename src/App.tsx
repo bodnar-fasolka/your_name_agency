@@ -12,6 +12,7 @@ const Index = lazy(() => import('./pages/Index'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const Cases = lazy(() => import('./pages/Cases'));
 const CaseFourface = lazy(() => import('./pages/CaseFourface'));
+const Case4Face = lazy(() => import('./pages/Case4Face'));
 
 // Loading component
 const PageLoader = () => (
@@ -42,6 +43,7 @@ const App = () => (
                 <Route path="/" element={<Index />} />
                 <Route path="/cases" element={<Cases />} />
                 <Route path="/cases/4face" element={<CaseFourface />} />
+                <Route path="/case/4face" element={<Case4Face />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>

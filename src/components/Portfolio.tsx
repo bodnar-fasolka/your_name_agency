@@ -55,12 +55,22 @@ const Portfolio = () => {
                   {caseItem.request}
                 </p>
               </div>
-              <div>
+              <div className="mb-6">
                 <h4 className="font-medium text-foreground mb-2">{t('resultLabel')}</h4>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {caseItem.results}
                 </p>
               </div>
+              
+              {/* Add link to detailed case study for 4FACE */}
+              {index === 1 && ( // 4FACE is the second case (index 1)
+                <Button variant="outline" size="sm" asChild className="w-full">
+                  <Link to="/case/4face" className="inline-flex items-center justify-center gap-2">
+                    Детальніше про кейс
+                    <ArrowRight size={14} />
+                  </Link>
+                </Button>
+              )}
             </div>
           ))}
         </div>
