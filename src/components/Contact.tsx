@@ -16,7 +16,12 @@ const Contact = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-            <Button size="lg" className="px-8 py-3 text-base">
+            <Button size="lg" className="px-8 py-3 text-base" asChild>
+              <a href="https://calendly.com/bodnar-solomiya-v/30min" target="_blank" rel="noopener noreferrer">
+                {t('contactUs')}
+              </a>
+            </Button>
+            <Button variant="outline" size="lg" className="px-8 py-3 text-base">
               solomijabodnar@gmail.com
             </Button>
             <Button variant="outline" size="lg" className="px-8 py-3 text-base">
