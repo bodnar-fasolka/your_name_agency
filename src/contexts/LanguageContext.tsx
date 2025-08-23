@@ -22,6 +22,15 @@ const translations = {
     scheduleCall: 'Запланувати дзвінок',
     marketingSlogan: 'Ми маркетингова агенція, що будує стратегії для бізнесу, тестує їх та впроваджує.',
     
+    // Values
+    valuesTitle: 'Наші цінності',
+    valuesTitle1: 'Результат понад усе',
+    valuesDescription1: 'Наша мета — не звіти, а реальне зростання бізнесу наших клієнтів.',
+    valuesTitle2: 'Партнерство, а не просто сервіс',
+    valuesDescription2: 'Ми стаємо частиною команди клієнта, а не зовнішнім підрядником.',
+    valuesTitle3: 'Відповідальність за результат',
+    valuesDescription3: 'Ми беремося за проєкти, де можемо створити реальну цінність і доводимо їх до завершення.',
+    
     // Services
     servicesTitle: 'Послуги',
     researchTitle: 'Дослідження',
@@ -84,6 +93,15 @@ const translations = {
     heroSubtitle: 'We Research. We Analyze. We Implement.',
     scheduleCall: 'Schedule a Call',
     marketingSlogan: 'We are a marketing agency that builds strategies, tests them, and implements them.',
+    
+    // Values
+    valuesTitle: 'Our Values',
+    valuesTitle1: 'Results Above All',
+    valuesDescription1: 'Our goal is not reports but the real growth of our clients\' business.',
+    valuesTitle2: 'Partnership, Not Just Service',
+    valuesDescription2: 'We become part of the client\'s team, not an external contractor.',
+    valuesTitle3: 'Accountability for Outcomes',
+    valuesDescription3: 'We take on projects where we can create real value and see them through to completion.',
     
     // Services
     servicesTitle: 'Services',

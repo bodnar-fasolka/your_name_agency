@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import SEO from "@/components/SEO";
 
 // Lazy load below-the-fold components for better performance
+const Values = lazy(() => import("@/components/Values"));
 const Services = lazy(() => import("@/components/Services"));
 const Portfolio = lazy(() => import("@/components/Portfolio"));
 const Team = lazy(() => import("@/components/Team"));
@@ -23,6 +24,9 @@ const Index = () => {
       <SEO />
       <Header />
       <Hero />
+      <Suspense fallback={<ComponentLoader />}>
+        <Values />
+      </Suspense>
       <Suspense fallback={<ComponentLoader />}>
         <Services />
       </Suspense>
