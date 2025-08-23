@@ -22,6 +22,10 @@ const translations = {
     scheduleCall: 'Запланувати дзвінок',
     marketingSlogan: 'Ми маркетингова агенція, що будує стратегії для бізнесу, тестує їх та впроваджує.',
     
+    // Mission
+    missionTitle: 'Місія',
+    missionText: 'стати GPS-навігацією для брендів у пошуку своєї аудиторії, обираючи найкоротший шлях до реального результату.',
+    
     // Values
     valuesTitle: 'Наші цінності',
     valuesTitle1: 'Результат понад усе',
@@ -93,6 +97,10 @@ const translations = {
     heroSubtitle: 'We Research. We Analyze. We Implement.',
     scheduleCall: 'Schedule a Call',
     marketingSlogan: 'We are a marketing agency that builds strategies, tests them, and implements them.',
+    
+    // Mission
+    missionTitle: 'Mission',
+    missionText: 'to become GPS navigation for brands in search of their audience, choosing the shortest path to real results.',
     
     // Values
     valuesTitle: 'Our Values',
