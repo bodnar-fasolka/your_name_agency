@@ -37,67 +37,32 @@ const Portfolio = () => {
         </div>
         
         <div className="grid lg:grid-cols-3 gap-8">
-          {cases.map((caseItem, index) => {
-            // Make the 4face card (index 1) clickable
-            const isClickable = index === 1; // 4face case
-            
-            if (isClickable) {
-              return (
-                <Link
-                  key={index}
-                  to="/cases/4face"
-                  className="p-6 border border-border hover-lift bg-card text-left cursor-pointer transition-all hover:border-foreground/40 block"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <h3 className="text-xl font-medium mb-4 text-foreground">
-                    {t('caseLabel')} {caseItem.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    {caseItem.description}
-                  </p>
-                  <div className="mb-4">
-                    <h4 className="font-medium text-foreground mb-2">{t('requestLabel')}</h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {caseItem.request}
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-foreground mb-2">{t('resultLabel')}</h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {caseItem.results}
-                    </p>
-                  </div>
-                </Link>
-              );
-            }
-            
-            return (
-              <div 
-                key={index}
-                className="p-6 border border-border hover-lift bg-card text-left"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <h3 className="text-xl font-medium mb-4 text-foreground">
-                  {t('caseLabel')} {caseItem.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  {caseItem.description}
+          {cases.map((caseItem, index) => (
+            <div 
+              key={index}
+              className="p-6 border border-border hover-lift bg-card text-left"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <h3 className="text-xl font-medium mb-4 text-foreground">
+                {t('caseLabel')} {caseItem.title}
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                {caseItem.description}
+              </p>
+              <div className="mb-4">
+                <h4 className="font-medium text-foreground mb-2">{t('requestLabel')}</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {caseItem.request}
                 </p>
-                <div className="mb-4">
-                  <h4 className="font-medium text-foreground mb-2">{t('requestLabel')}</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {caseItem.request}
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-medium text-foreground mb-2">{t('resultLabel')}</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {caseItem.results}
-                  </p>
-                </div>
               </div>
-            );
-          })}
+              <div>
+                <h4 className="font-medium text-foreground mb-2">{t('resultLabel')}</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {caseItem.results}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
         
         {/* Call to Action */}

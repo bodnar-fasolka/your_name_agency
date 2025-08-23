@@ -20,6 +20,7 @@ const translations = {
     // Hero
     heroSubtitle: 'Досліджуємо. Аналізуємо. Впроваджуємо.',
     scheduleCall: 'Запланувати дзвінок',
+    marketingSlogan: 'Ми маркетингова агенція, що будує стратегії для бізнесу, тестує їх та впроваджує.',
     
     // Services
     servicesTitle: 'Послуги',
@@ -82,6 +83,7 @@ const translations = {
     // Hero
     heroSubtitle: 'We Research. We Analyze. We Implement.',
     scheduleCall: 'Schedule a Call',
+    marketingSlogan: 'We are a marketing agency that builds strategies, tests them, and implements them.',
     
     // Services
     servicesTitle: 'Services',

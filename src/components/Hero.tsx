@@ -22,6 +22,11 @@ const Hero = () => {
                 {t('scheduleCall')}
               </a>
             </Button>
+            
+            <p className="text-center text-lg text-gray-700 mt-6 max-w-xl mx-auto">
+              Ми маркетингова агенція, що будує стратегії для бізнесу, тестує їх та впроваджує.
+              {/* EN: We are a marketing agency that builds strategies, tests them, and implements them. */}
+            </p>
           </div>
         </div>
       </div>
