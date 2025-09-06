@@ -8,7 +8,8 @@ import { HelmetProvider } from 'react-helmet-async';
 import { Suspense, lazy } from "react";
 
 // Lazy load components for better performance
-const Index = lazy(() => import('./pages/Index'));
+const Home = lazy(() => import('./pages/Home'));
+const AboutUs = lazy(() => import('./pages/AboutUs'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const Cases = lazy(() => import('./pages/Cases'));
 const CaseFourface = lazy(() => import('./pages/CaseFourface'));
@@ -40,7 +41,8 @@ const App = () => (
           <BrowserRouter>
             <Suspense fallback={<PageLoader />}>
               <Routes>
-                <Route path="/" element={<Index />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<AboutUs />} />
                 <Route path="/cases" element={<Cases />} />
                 <Route path="/cases/4face" element={<CaseFourface />} />
                 <Route path="/case/4face" element={<Case4Face />} />

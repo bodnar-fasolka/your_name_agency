@@ -1,9 +1,11 @@
 import { Button } from "./ui/button";
 import { Globe } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const { language, setLanguage, t } = useLanguage();
+  const location = useLocation();
 
   const toggleLanguage = () => {
     setLanguage(language === 'uk' ? 'en' : 'uk');
@@ -13,20 +15,47 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="font-bold text-xl text-foreground">{t('siteName')}</div>
+          <Link to="/" className="font-bold text-xl text-foreground hover:text-primary transition-colors">
+            {t('siteName')}
+          </Link>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">
-              {t('services')}
-            </a>
+            <Link 
+              to="/about" 
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {t('aboutUs')}
+            </Link>
             
-            <a href="#portfolio" className="text-muted-foreground hover:text-foreground transition-colors">
-              {t('portfolio')}
-            </a>
+            {location.pathname === '/' ? (
+              <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">
+                {t('services')}
+              </a>
+            ) : (
+              <Link to="/#services" className="text-muted-foreground hover:text-foreground transition-colors">
+                {t('services')}
+              </Link>
+            )}
             
-            <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
-              {t('contact')}
-            </a>
+            {location.pathname === '/' ? (
+              <a href="#portfolio" className="text-muted-foreground hover:text-foreground transition-colors">
+                {t('portfolio')}
+              </a>
+            ) : (
+              <Link to="/#portfolio" className="text-muted-foreground hover:text-foreground transition-colors">
+                {t('portfolio')}
+              </Link>
+            )}
+            
+            {location.pathname === '/' ? (
+              <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
+                {t('contact')}
+              </a>
+            ) : (
+              <Link to="/#contact" className="text-muted-foreground hover:text-foreground transition-colors">
+                {t('contact')}
+              </Link>
+            )}
           </nav>
           
           <div className="flex items-center space-x-4">

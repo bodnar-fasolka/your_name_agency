@@ -16,6 +16,7 @@ const translations = {
     portfolio: 'Кейси',
     contact: 'Контакти',
     contactUs: 'Зв\'язатися',
+    aboutUs: 'Про нас',
     
     // Hero
     heroSubtitle: 'Досліджуємо. Аналізуємо. Впроваджуємо.',
@@ -92,6 +93,7 @@ const translations = {
     portfolio: 'Portfolio',
     contact: 'Contact',
     contactUs: 'Contact Us',
+    aboutUs: 'About Us',
     
     // Hero
     heroSubtitle: 'We Research. We Analyze. We Implement.',
