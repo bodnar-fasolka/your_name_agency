@@ -5,7 +5,6 @@ import ServicesSection from "@/components/ServicesSection";
 import SEO from "@/components/SEO";
 
 // Lazy load below-the-fold components for better performance
-const Services = lazy(() => import("@/components/Services"));
 const Portfolio = lazy(() => import("@/components/Portfolio"));
 const Contact = lazy(() => import("@/components/Contact"));
 const Footer = lazy(() => import("@/components/Footer"));
@@ -25,9 +24,6 @@ const Home = () => {
       <Hero />
       <ServicesSection />
       <Suspense fallback={<ComponentLoader />}>
-        <Services />
-      </Suspense>
-      <Suspense fallback={<ComponentLoader />}>
         <Portfolio />
       </Suspense>
       <Suspense fallback={<ComponentLoader />}>
@@ -37,6 +33,10 @@ const Home = () => {
         <Footer />
       </Suspense>
     </div>
+  );
+};
+
+export default Home;
   );
 };
 
