@@ -10,6 +10,7 @@ import { Suspense, lazy } from "react";
 // Lazy load components for better performance
 const Home = lazy(() => import('./pages/Home'));
 const AboutUs = lazy(() => import('./pages/AboutUs'));
+const ServicePage = lazy(() => import('./pages/ServicePage'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const Cases = lazy(() => import('./pages/Cases'));
 const CaseFourface = lazy(() => import('./pages/CaseFourface'));
@@ -43,6 +44,8 @@ const App = () => (
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<AboutUs />} />
+                <Route path="/services/:service" element={<ServicePage />} />
+                <Route path="/services/:service/:subService" element={<ServicePage />} />
                 <Route path="/cases" element={<Cases />} />
                 <Route path="/cases/4face" element={<CaseFourface />} />
                 <Route path="/case/4face" element={<Case4Face />} />

@@ -1,6 +1,7 @@
 import { Suspense, lazy } from 'react';
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import ServicesSection from "@/components/ServicesSection";
 import SEO from "@/components/SEO";
 
 // Lazy load below-the-fold components for better performance
@@ -22,6 +23,7 @@ const Home = () => {
       <SEO />
       <Header />
       <Hero />
+      <ServicesSection />
       <Suspense fallback={<ComponentLoader />}>
         <Services />
       </Suspense>
