@@ -23,6 +23,23 @@ const translations = {
     scheduleCall: 'Запланувати дзвінок',
     marketingSlogan: 'Ми маркетингова агенція, що будує стратегії для бізнесу, тестує їх та впроваджує.',
     
+    // Our Services Section
+    ourServicesTitle: 'Наші послуги',
+    launchProductTitle: 'Запуск продукту',
+    managementTitle: 'Ведення',
+    leadGenerationTitle: 'Лідогенерація',
+    researchService: 'Дослідження',
+    managementService: 'Ведення',
+    strategyService: 'Стратегія',
+    facebookService: 'Facebook',
+    instagramService: 'Instagram',
+    tiktokService: 'TikTok',
+    threadsService: 'Threads',
+    xService: 'X',
+    seoService: 'SEO',
+    ppcService: 'PPC',
+    metaAdsService: 'Meta Ads',
+    
     // Mission
     missionTitle: 'Місія',
     missionText: 'стати GPS-навігацією для брендів у пошуку своєї аудиторії, обираючи найкоротший шлях до реального результату.',
@@ -99,6 +116,23 @@ const translations = {
     heroSubtitle: 'We Research. We Analyze. We Implement.',
     scheduleCall: 'Schedule a Call',
     marketingSlogan: 'We are a marketing agency that builds strategies, tests them, and implements them.',
+    
+    // Our Services Section
+    ourServicesTitle: 'Our Services',
+    launchProductTitle: 'Launch a Product',
+    managementTitle: 'Management',
+    leadGenerationTitle: 'Lead Generation',
+    researchService: 'Research',
+    managementService: 'Management',
+    strategyService: 'Strategy',
+    facebookService: 'Facebook',
+    instagramService: 'Instagram',
+    tiktokService: 'TikTok',
+    threadsService: 'Threads',
+    xService: 'X',
+    seoService: 'SEO',
+    ppcService: 'PPC',
+    metaAdsService: 'Meta Ads',
     
     // Mission
     missionTitle: 'Mission',
