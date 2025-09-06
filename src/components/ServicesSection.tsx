@@ -47,7 +47,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div 
               key={service.slug}
-              className="relative p-8 border-2 border-dashed border-gray-300 bg-gray-100 hover:shadow-lg transition-shadow duration-300 group"
+              className="relative p-8 border-2 border-dashed border-gray-300 bg-gray-100 rounded-[20px] hover:shadow-lg transition-shadow duration-300 group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Diagonal Arrow */}
@@ -71,7 +71,7 @@ const ServicesSection = () => {
                   <Link
                     key={subService.slug}
                     to={`/services/${service.slug}/${subService.slug}`}
-                    className="block text-muted-foreground hover:text-foreground hover:underline transition-all duration-200"
+                    className="block text-muted-foreground underline hover:text-foreground transition-colors duration-200"
                   >
                     {subService.name}
                   </Link>
