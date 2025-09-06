@@ -52,7 +52,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div 
               key={service.slug}
-              className="relative h-full p-6 md:p-8 border-2 border-dashed border-gray-300 bg-gray-100 rounded-[20px] hover:shadow-md transition-shadow duration-300 group flex flex-col"
+              className="relative h-full p-[17px] border-2 border-dashed border-gray-300 bg-gray-100 rounded-[20px] hover:shadow-md transition-shadow duration-300 group flex flex-col"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Diagonal Arrow - Bottom Right */}
