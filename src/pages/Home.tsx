@@ -4,7 +4,7 @@ import Hero from "@/components/Hero";
 import ServicesSection from "@/components/ServicesSection";
 import HowWeWorkSection from "@/components/HowWeWorkSection";
 import FaqSection from "@/components/FaqSection";
-import Preloader from "@/components/Preloader";
+import Loader from "@/components/Loader";
 import SEO from "@/components/SEO";
 
 // Lazy load below-the-fold components for better performance
@@ -23,7 +23,7 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Hide preloader after 2 seconds
+    // Hide loader after 2 seconds
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2000);
@@ -33,7 +33,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Preloader isVisible={loading} />
+      <Loader isVisible={loading} />
       
       {!loading && (
         <>
