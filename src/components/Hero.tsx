@@ -1,39 +1,10 @@
 import { Button } from "./ui/button";
 import { useLanguage } from "../contexts/LanguageContext";
 import Lottie from "lottie-react";
-import { useState, useEffect } from "react";
+import animationData from "../assets/anim.json";
 
 const Hero = () => {
   const { t } = useLanguage();
-  const [animationData, setAnimationData] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    // Load the Lottie animation from the URL
-    const loadAnimation = async () => {
-      try {
-        console.log("Loading Lottie animation..."); // Debug log
-        const response = await fetch("https://lottie.host/724ed371-2016-4f51-b708-817435cfe16d/jewObUFX2i.lottie");
-        
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        
-        const data = await response.json();
-        console.log("Animation loaded successfully:", data); // Debug log
-        setAnimationData(data);
-        setError(null);
-      } catch (err) {
-        console.error("Error loading animation:", err);
-        setError(err instanceof Error ? err.message : "Failed to load animation");
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    loadAnimation();
-  }, []);
 
   return (
     <section className="min-h-screen flex items-center justify-center px-4 pt-20">
@@ -62,28 +33,12 @@ const Hero = () => {
           {/* Lottie Animation */}
           <div className="mt-10 flex justify-center">
             <div className="max-w-md">
-              {isLoading && (
-                <div className="w-64 h-64 bg-gray-200 rounded-lg animate-pulse flex items-center justify-center">
-                  <span className="text-gray-500">Loading animation...</span>
-                </div>
-              )}
-              
-              {error && (
-                <div className="w-64 h-64 bg-red-100 rounded-lg flex items-center justify-center">
-                  <span className="text-red-500 text-sm text-center px-4">
-                    Animation failed to load: {error}
-                  </span>
-                </div>
-              )}
-              
-              {animationData && !isLoading && !error && (
-                <Lottie
-                  animationData={animationData}
-                  loop={true}
-                  autoplay={true}
-                  style={{ width: '100%', height: 'auto', maxWidth: '300px' }}
-                />
-              )}
+              <Lottie
+                animationData={animationData}
+                loop={true}
+                autoplay={true}
+                style={{ width: '100%', height: 'auto', maxWidth: '300px' }}
+              />
             </div>
           </div>
         </div>
