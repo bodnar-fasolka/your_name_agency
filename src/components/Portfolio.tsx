@@ -8,6 +8,16 @@ const Portfolio = () => {
   
   const cases = [
     {
+      id: 'serpano',
+      title: 'Serpano.k',
+      tags: ['SMM', 'Стратегія', 'Digital'],
+      description: 'Підвищення заповнюваності відпочинкового комплексу у Карпатах через Instagram.',
+      image: 'PICTURE_SERPANOK', // Background image from user
+      logo: 'LOGO_SERPANOK', // Client logo from user
+      link: '/cases/serpano',
+      gradient: 'from-green-500/20 to-blue-500/20'
+    },
+    {
       id: 'fourface',
       title: '4FACE',
       tags: ['Дослідження', 'Стратегія', 'SMM'],
@@ -16,36 +26,6 @@ const Portfolio = () => {
       logo: '/cases/4face-logo.svg', // Client logo
       link: '/case/4face',
       gradient: 'from-pink-500/20 to-purple-500/20'
-    },
-    {
-      id: 'serpano',
-      title: 'Serpano.k',
-      tags: ['SMM', 'Стратегія', 'Digital'],
-      description: 'Підвищення заповнюваності відпочинкового комплексу у Карпатах через Instagram.',
-      image: '/cases/serpano-bg.jpg',
-      logo: '/cases/serpano-logo.svg',
-      link: '/cases/serpano',
-      gradient: 'from-green-500/20 to-blue-500/20'
-    },
-    {
-      id: 'ucu',
-      title: 'Центр Лідерства УКУ',
-      tags: ['Дослідження', 'Digital', 'Стратегія'],
-      description: 'Створення каналів комунікації та впізнаваності для дослідницького центру.',
-      image: '/cases/ucu-bg.jpg',
-      logo: '/cases/ucu-logo.svg',
-      link: '/cases/ucu-leadership',
-      gradient: 'from-blue-500/20 to-indigo-500/20'
-    },
-    {
-      id: 'example',
-      title: 'Example Case',
-      tags: ['Брендинг', 'Стратегія'],
-      description: 'Приклад четвертого кейсу для демонстрації responsive сітки.',
-      image: '/cases/example-bg.jpg',
-      logo: '/cases/example-logo.svg',
-      link: '/cases/example',
-      gradient: 'from-orange-500/20 to-red-500/20'
     }
   ];
 
