@@ -19,7 +19,7 @@ const Preloader = ({ isVisible }: PreloaderProps) => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black z-50">
+    <div className="fixed inset-0 flex items-center justify-center bg-black z-[9999]">
       {animationData && (
         <Lottie
           animationData={animationData}
