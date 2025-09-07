@@ -12,8 +12,8 @@ const Portfolio = () => {
       title: 'Serpano.k',
       tags: ['SMM', 'Стратегія', 'Digital'],
       description: 'Підвищення заповнюваності відпочинкового комплексу у Карпатах через Instagram.',
-      image: 'PICTURE_SERPANOK', // Background image from user
-      logo: 'LOGO_SERPANOK', // Client logo from user
+      image: '/images/serpano-bg.jpg', // Actual path to Serpano background image
+      logo: '/images/serpano-logo.svg', // Actual path to Serpano logo
       link: '/cases/serpano',
       gradient: 'from-green-500/20 to-blue-500/20'
     },
@@ -22,8 +22,8 @@ const Portfolio = () => {
       title: '4FACE',
       tags: ['Дослідження', 'Стратегія', 'SMM'],
       description: 'Запуск першого незалежного б\'юті-журналу на український ринок.',
-      image: 'PICTURE_4FACE', // Background image from user
-      logo: 'LOGO_4FACE', // Client logo from user
+      image: '/images/4face-bg.jpg', // Actual path to 4FACE background image
+      logo: '/images/4face-logo.svg', // Actual path to 4FACE logo
       link: '/case/4face',
       gradient: 'from-pink-500/20 to-purple-500/20'
     }
