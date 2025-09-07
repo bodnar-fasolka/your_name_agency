@@ -29,10 +29,10 @@ const Home = () => {
         <Portfolio />
       </Suspense>
       <HowWeWorkSection />
+      <FaqSection />
       <Suspense fallback={<ComponentLoader />}>
         <Contact />
       </Suspense>
-      <FaqSection />
       <Suspense fallback={<ComponentLoader />}>
         <Footer />
       </Suspense>
