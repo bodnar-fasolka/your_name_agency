@@ -13,7 +13,7 @@ const Portfolio = () => {
       tags: ['SMM', 'Стратегія', 'Digital'],
       description: 'Підвищення заповнюваності відпочинкового комплексу у Карпатах через Instagram.',
       image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop', // Placeholder mountain image
-      logo: 'https://via.placeholder.com/64x64/ffffff/000000?text=S', // Placeholder logo
+      logo: '/images/LOGO_SERPANOK.png', // Your uploaded Serpano.k logo
       link: '/cases/serpano',
       gradient: 'from-green-500/20 to-blue-500/20'
     },
