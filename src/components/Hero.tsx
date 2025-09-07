@@ -1,7 +1,5 @@
 import { Button } from "./ui/button";
 import { useLanguage } from "../contexts/LanguageContext";
-import Lottie from "lottie-react";
-import animationData from "../assets/anim.json";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -28,18 +26,6 @@ const Hero = () => {
             <p className="text-center text-lg text-gray-700 mt-6 max-w-xl mx-auto">
               {t('marketingSlogan')}
             </p>
-          </div>
-
-          {/* Lottie Animation */}
-          <div className="mt-10 flex justify-center">
-            <div className="max-w-md">
-              <Lottie
-                animationData={animationData}
-                loop={true}
-                autoplay={true}
-                style={{ width: '100%', height: 'auto', maxWidth: '300px' }}
-              />
-            </div>
           </div>
         </div>
       </div>
