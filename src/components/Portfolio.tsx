@@ -12,8 +12,8 @@ const Portfolio = () => {
       title: 'Serpano.k',
       tags: ['SMM', 'Стратегія', 'Digital'],
       description: 'Підвищення заповнюваності відпочинкового комплексу у Карпатах через Instagram.',
-      image: '/images/serpano-bg.jpg', // Actual path to Serpano background image
-      logo: '/images/serpano-logo.svg', // Actual path to Serpano logo
+      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop', // Placeholder mountain image
+      logo: 'https://via.placeholder.com/64x64/ffffff/000000?text=S', // Placeholder logo
       link: '/cases/serpano',
       gradient: 'from-green-500/20 to-blue-500/20'
     },
@@ -22,8 +22,8 @@ const Portfolio = () => {
       title: '4FACE',
       tags: ['Дослідження', 'Стратегія', 'SMM'],
       description: 'Запуск першого незалежного б\'юті-журналу на український ринок.',
-      image: '/images/4face-bg.jpg', // Actual path to 4FACE background image
-      logo: '/images/4face-logo.svg', // Actual path to 4FACE logo
+      image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&h=600&fit=crop', // Placeholder beauty image
+      logo: 'https://via.placeholder.com/64x64/ffffff/ff69b4?text=4F', // Placeholder logo
       link: '/case/4face',
       gradient: 'from-pink-500/20 to-purple-500/20'
     }
