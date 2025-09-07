@@ -22,8 +22,8 @@ const Portfolio = () => {
       title: '4FACE',
       tags: ['Дослідження', 'Стратегія', 'SMM'],
       description: 'Запуск першого незалежного б\'юті-журналу на український ринок.',
-      image: 'PICTURE_4FACE', // Background image from user
-      logo: 'LOGO_4FACE', // Client logo from user
+      image: '/images/LOGO_4FACE.png', // Your uploaded image
+      logo: '/images/LOGO_4FACE.png', // Same image for logo
       link: '/case/4face',
       gradient: 'from-pink-500/20 to-purple-500/20'
     }
