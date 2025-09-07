@@ -1,8 +1,19 @@
 import { Button } from "./ui/button";
 import { useLanguage } from "../contexts/LanguageContext";
+import Lottie from "lottie-react";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
   const { t } = useLanguage();
+  const [animationData, setAnimationData] = useState(null);
+
+  useEffect(() => {
+    // Load the Lottie animation from the URL
+    fetch("https://lottie.host/724ed371-2016-4f51-b708-817435cfe16d/jewObUFX2i.lottie")
+      .then(response => response.json())
+      .then(data => setAnimationData(data))
+      .catch(error => console.error("Error loading animation:", error));
+  }, []);
 
   return (
     <section className="min-h-screen flex items-center justify-center px-4 pt-20">
@@ -26,6 +37,20 @@ const Hero = () => {
             <p className="text-center text-lg text-gray-700 mt-6 max-w-xl mx-auto">
               {t('marketingSlogan')}
             </p>
+          </div>
+
+          {/* Lottie Animation */}
+          <div className="mt-10 flex justify-center">
+            <div className="max-w-md">
+              {animationData && (
+                <Lottie
+                  animationData={animationData}
+                  loop={true}
+                  autoplay={true}
+                  style={{ width: '100%', height: 'auto' }}
+                />
+              )}
+            </div>
           </div>
         </div>
       </div>
