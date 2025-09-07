@@ -24,10 +24,10 @@ const Home = () => {
       <Header />
       <Hero />
       <ServicesSection />
-      <HowWeWorkSection />
       <Suspense fallback={<ComponentLoader />}>
         <Portfolio />
       </Suspense>
+      <HowWeWorkSection />
       <Suspense fallback={<ComponentLoader />}>
         <Contact />
       </Suspense>
