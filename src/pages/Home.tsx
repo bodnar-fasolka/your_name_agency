@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ServicesSection from "@/components/ServicesSection";
 import HowWeWorkSection from "@/components/HowWeWorkSection";
+import FaqSection from "@/components/FaqSection";
 import SEO from "@/components/SEO";
 
 // Lazy load below-the-fold components for better performance
@@ -31,6 +32,7 @@ const Home = () => {
       <Suspense fallback={<ComponentLoader />}>
         <Contact />
       </Suspense>
+      <FaqSection />
       <Suspense fallback={<ComponentLoader />}>
         <Footer />
       </Suspense>
