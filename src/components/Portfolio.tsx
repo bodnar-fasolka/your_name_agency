@@ -1,6 +1,5 @@
 import { useLanguage } from "../contexts/LanguageContext";
-import { Button } from "./ui/button";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Portfolio = () => {
@@ -40,7 +39,7 @@ const Portfolio = () => {
         </div>
         
         {/* Cases Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {cases.map((caseItem, index) => (
             <Link
               key={caseItem.id}
@@ -112,16 +111,6 @@ const Portfolio = () => {
               </div>
             </Link>
           ))}
-        </div>
-        
-        {/* Call to Action */}
-        <div className="text-center slide-up">
-          <Button variant="outline" size="lg" asChild className="group">
-            <Link to="/cases" className="inline-flex items-center gap-2">
-              {t('viewAllCases')}
-              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </Button>
         </div>
       </div>
     </section>
