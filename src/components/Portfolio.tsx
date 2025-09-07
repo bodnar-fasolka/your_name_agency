@@ -1,6 +1,6 @@
 import { useLanguage } from "../contexts/LanguageContext";
 import { Button } from "./ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Portfolio = () => {
@@ -8,75 +8,136 @@ const Portfolio = () => {
   
   const cases = [
     {
-      title: t('case1Title'),
-      description: t('case1Description'),
-      request: t('case1Request'),
-      results: t('case1Results')
+      id: 'fourface',
+      title: '4FACE',
+      tags: ['Дослідження', 'Стратегія', 'SMM'],
+      description: 'Запуск першого незалежного б\'юті-журналу на український ринок.',
+      image: '/cases/4face-bg.jpg', // Background image
+      logo: '/cases/4face-logo.svg', // Client logo
+      link: '/case/4face',
+      gradient: 'from-pink-500/20 to-purple-500/20'
     },
     {
-      title: t('case2Title'),
-      description: t('case2Description'),
-      request: t('case2Request'),
-      results: t('case2Results')
+      id: 'serpano',
+      title: 'Serpano.k',
+      tags: ['SMM', 'Стратегія', 'Digital'],
+      description: 'Підвищення заповнюваності відпочинкового комплексу у Карпатах через Instagram.',
+      image: '/cases/serpano-bg.jpg',
+      logo: '/cases/serpano-logo.svg',
+      link: '/cases/serpano',
+      gradient: 'from-green-500/20 to-blue-500/20'
     },
     {
-      title: t('case3Title'),
-      description: t('case3Description'),
-      request: t('case3Request'),
-      results: t('case3Results')
+      id: 'ucu',
+      title: 'Центр Лідерства УКУ',
+      tags: ['Дослідження', 'Digital', 'Стратегія'],
+      description: 'Створення каналів комунікації та впізнаваності для дослідницького центру.',
+      image: '/cases/ucu-bg.jpg',
+      logo: '/cases/ucu-logo.svg',
+      link: '/cases/ucu-leadership',
+      gradient: 'from-blue-500/20 to-indigo-500/20'
+    },
+    {
+      id: 'example',
+      title: 'Example Case',
+      tags: ['Брендинг', 'Стратегія'],
+      description: 'Приклад четвертого кейсу для демонстрації responsive сітки.',
+      image: '/cases/example-bg.jpg',
+      logo: '/cases/example-logo.svg',
+      link: '/cases/example',
+      gradient: 'from-orange-500/20 to-red-500/20'
     }
   ];
 
   return (
-    <section id="portfolio" className="py-20 px-4">
+    <section id="portfolio" className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16 slide-up">
-          <h2 className="text-3xl md:text-4xl font-light mb-4 text-foreground">
-            {t('portfolioTitle')}
+        {/* Section Title - Left Aligned */}
+        <div className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-left">
+            Кейси
           </h2>
         </div>
         
-        <div className="grid lg:grid-cols-3 gap-8">
+        {/* Cases Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {cases.map((caseItem, index) => (
-            <div 
-              key={index}
-              className="p-6 border border-border hover-lift bg-card text-left"
+            <Link
+              key={caseItem.id}
+              to={caseItem.link}
+              className="group block relative h-80 border-2 border-dashed border-gray-300 rounded-[20px] overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <h3 className="text-xl font-medium mb-4 text-foreground">
-                {t('caseLabel')} {caseItem.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                {caseItem.description}
-              </p>
-              <div className="mb-4">
-                <h4 className="font-medium text-foreground mb-2">{t('requestLabel')}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {caseItem.request}
-                </p>
+              {/* Background Image with Gradient Overlay */}
+              <div className="absolute inset-0">
+                <div 
+                  className="w-full h-full bg-cover bg-center"
+                  style={{ 
+                    backgroundImage: `url(${caseItem.image})`,
+                    backgroundColor: '#f3f4f6' // Fallback gray background
+                  }}
+                />
+                <div className={`absolute inset-0 bg-gradient-to-br ${caseItem.gradient} backdrop-blur-[0.5px]`} />
+                <div className="absolute inset-0 bg-white/40" />
               </div>
-              <div className="mb-6">
-                <h4 className="font-medium text-foreground mb-2">{t('resultLabel')}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {caseItem.results}
-                </p>
+
+              {/* Content Container */}
+              <div className="relative h-full p-6 flex flex-col justify-between">
+                {/* Top Section */}
+                <div className="flex justify-between items-start">
+                  <div className="flex-1">
+                    {/* Case Title */}
+                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                      {caseItem.title}
+                    </h3>
+                    
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {caseItem.tags.map((tag) => (
+                        <span 
+                          key={tag}
+                          className="px-3 py-1 text-xs font-medium bg-white rounded-full text-gray-700 shadow-sm"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Client Logo */}
+                  <div className="ml-4 w-16 h-16 bg-white rounded-xl shadow-sm flex items-center justify-center flex-shrink-0">
+                    <img 
+                      src={caseItem.logo} 
+                      alt={`${caseItem.title} logo`}
+                      className="w-10 h-10 object-contain"
+                      onError={(e) => {
+                        // Fallback if logo doesn't exist
+                        e.currentTarget.style.display = 'none';
+                        e.currentTarget.parentElement!.innerHTML = `<div class="w-8 h-8 bg-gray-300 rounded-lg flex items-center justify-center text-gray-600 text-xs font-bold">${caseItem.title.charAt(0)}</div>`;
+                      }}
+                    />
+                  </div>
+                </div>
+
+                {/* Bottom Section */}
+                <div className="flex justify-between items-end">
+                  {/* Description */}
+                  <p className="text-gray-700 text-sm leading-relaxed max-w-sm">
+                    {caseItem.description}
+                  </p>
+
+                  {/* Bottom-right Arrow */}
+                  <div className="ml-4">
+                    <ArrowUpRight className="w-6 h-6 text-gray-600 group-hover:text-primary transition-colors" />
+                  </div>
+                </div>
               </div>
-              
-              {/* Add link to detailed case study for 4FACE */}
-              {index === 1 && ( // 4FACE is the second case (index 1)
-                <Button variant="outline" size="sm" asChild className="w-full">
-                  <Link to="/case/4face" className="inline-flex items-center justify-center gap-2">
-                    Детальніше про кейс
-                    <ArrowRight size={14} />
-                  </Link>
-                </Button>
-              )}
-            </div>
+            </Link>
           ))}
         </div>
         
         {/* Call to Action */}
-        <div className="text-center mt-12 slide-up">
+        <div className="text-center slide-up">
           <Button variant="outline" size="lg" asChild className="group">
             <Link to="/cases" className="inline-flex items-center gap-2">
               {t('viewAllCases')}
