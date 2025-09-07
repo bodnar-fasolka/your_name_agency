@@ -1,9 +1,10 @@
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useState, useEffect } from 'react';
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ServicesSection from "@/components/ServicesSection";
 import HowWeWorkSection from "@/components/HowWeWorkSection";
 import FaqSection from "@/components/FaqSection";
+import Loader from "@/components/Loader";
 import SEO from "@/components/SEO";
 
 // Lazy load below-the-fold components for better performance
@@ -19,23 +20,40 @@ const ComponentLoader = () => (
 );
 
 const Home = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Hide loader after 2 seconds
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
-      <SEO />
-      <Header />
-      <Hero />
-      <ServicesSection />
-      <Suspense fallback={<ComponentLoader />}>
-        <Portfolio />
-      </Suspense>
-      <HowWeWorkSection />
-      <FaqSection />
-      <Suspense fallback={<ComponentLoader />}>
-        <Contact />
-      </Suspense>
-      <Suspense fallback={<ComponentLoader />}>
-        <Footer />
-      </Suspense>
+      <Loader isVisible={isLoading} />
+      
+      {!isLoading && (
+        <>
+          <SEO />
+          <Header />
+          <Hero />
+          <ServicesSection />
+          <Suspense fallback={<ComponentLoader />}>
+            <Portfolio />
+          </Suspense>
+          <HowWeWorkSection />
+          <FaqSection />
+          <Suspense fallback={<ComponentLoader />}>
+            <Contact />
+          </Suspense>
+          <Suspense fallback={<ComponentLoader />}>
+            <Footer />
+          </Suspense>
+        </>
+      )}
     </div>
   );
 };
