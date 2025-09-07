@@ -27,24 +27,18 @@ const HowWeWorkSection = () => {
           {steps.map((step, index) => (
             <div 
               key={index}
-              className="relative border-2 border-dashed border-black/70 rounded-[20px] p-6 md:p-8"
+              className="text-center"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Inner Card */}
-              <div 
-                className="relative -mt-10 md:-mt-12 mx-6 bg-white rounded-[16px] border border-black/70 shadow-sm p-6 hover:shadow-md transition-shadow"
-                role="group"
-              >
-                {/* Step Title */}
-                <h3 className="text-xl md:text-2xl font-semibold text-black text-center">
-                  {step.title}
-                </h3>
-                
-                {/* Step Description */}
-                <p className="mt-3 text-base md:text-lg text-gray-700 text-center leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
+              {/* Step Title */}
+              <h3 className="text-xl md:text-2xl font-semibold text-black mb-4">
+                {step.title}
+              </h3>
+              
+              {/* Step Description */}
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                {step.description}
+              </p>
             </div>
           ))}
         </div>
