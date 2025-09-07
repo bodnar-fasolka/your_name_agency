@@ -57,8 +57,6 @@ const Portfolio = () => {
                     backgroundColor: '#f3f4f6' // Fallback gray background
                   }}
                 />
-                <div className={`absolute inset-0 bg-gradient-to-br ${caseItem.gradient} backdrop-blur-[0.5px]`} />
-                <div className="absolute inset-0 bg-white/40" />
               </div>
 
               {/* Content Container */}
