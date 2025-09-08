@@ -8,7 +8,7 @@ const Hero = () => {
     <section className="pt-32 pb-0 px-4">
       <div className="container mx-auto max-w-4xl text-center">
         <div className="fade-in">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 text-foreground leading-tight text-center">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 text-foreground leading-tight text-center typing">
             <span className="md:hidden">Y_N_A</span>
             <span className="hidden md:inline">{t('siteName')}</span>
           </h1>

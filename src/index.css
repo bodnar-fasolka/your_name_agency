@@ -163,6 +163,34 @@ All colors MUST be HSL.
     box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
   }
 
+  /* Typing animation for headlines */
+  .typing {
+    overflow: hidden;
+    border-right: 0.15em solid black;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.05em;
+    animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: black;
+    }
+  }
+
   /* SpinKit Cube Grid Loader */
   .sk-cube-grid {
     width: 60px;
