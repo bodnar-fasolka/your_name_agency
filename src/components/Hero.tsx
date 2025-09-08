@@ -27,6 +27,22 @@ const Hero = () => {
               {t('marketingSlogan')}
             </p>
           </div>
+
+          {/* Cat Movement Animation */}
+          <div className="mt-10 flex justify-center">
+            <div className="max-w-md">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-auto max-w-sm mx-auto rounded-lg"
+              >
+                <source src="/Cat Movement.webm" type="video/webm" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
         </div>
       </div>
     </section>
