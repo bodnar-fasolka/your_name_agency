@@ -165,20 +165,24 @@ All colors MUST be HSL.
 
   /* Typing animation for headlines */
   .typing {
-    overflow: hidden;
-    white-space: nowrap;
     display: inline-block;
+    white-space: nowrap;
     width: fit-content;
-    letter-spacing: 0.05em;
-    animation: typing 3.5s steps(30, end);
+    letter-spacing: 0.02em;
   }
 
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
+  .typing-reveal {
+    display: inline-block;
+    padding-right: .1em;
+    clip-path: inset(0 100% 0 0);
+    animation: reveal 3s steps(30, end) forwards;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+  }
+
+  @keyframes reveal {
+    to { 
+      clip-path: inset(0 0 0 0); 
     }
   }
 
