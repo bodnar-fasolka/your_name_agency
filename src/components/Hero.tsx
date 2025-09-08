@@ -5,7 +5,7 @@ const Hero = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-20 px-4 pt-20">
+    <section className="pt-32 pb-0 px-4">
       <div className="container mx-auto max-w-4xl text-center">
         <div className="fade-in">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground leading-tight">
@@ -31,7 +31,7 @@ const Hero = () => {
       </div>
       
       {/* Cat Movement Animation at the end of the section */}
-      <div className="flex justify-center pb-8">
+      <div className="flex justify-center">
         <div className="max-w-xs">
           <video
             autoPlay
