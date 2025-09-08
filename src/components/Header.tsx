@@ -15,8 +15,8 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border animate-slide-down">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="font-bold text-xl text-foreground hover:text-primary transition-colors">
-            {t('siteName')}
+                    <Link to="/" className="text-xl font-bold text-foreground hover:text-primary transition-colors">
+            Y_N_A
           </Link>
           
           <nav className="hidden md:flex items-center space-x-8">
