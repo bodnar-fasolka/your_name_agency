@@ -1,7 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
-import { Rocket } from "lucide-react";
+import { Rocket, Target, TrendingUp, Users, BarChart3, Megaphone } from "lucide-react";
 
 const ServicesSection = () => {
   const { t } = useLanguage();
@@ -11,7 +11,12 @@ const ServicesSection = () => {
       title: "Запуск продукту",
       description: "Комплексна стратегія виходу на ринок",
       icon: <Rocket className="w-8 h-8" />,
-      link: "/launch-product"
+      link: "/launch-product",
+      subServices: [
+        { name: "Дослідження", link: "/research" },
+        { name: "Стратегія", link: "/strategy" }, 
+        { name: "Ведення", link: "/management" }
+      ]
     },
     {
       title: t('managementTitle'),
@@ -32,6 +37,31 @@ const ServicesSection = () => {
         { name: t('ppcService'), slug: "ppc" },
         { name: t('metaAdsService'), slug: "meta-ads" }
       ]
+    },
+    {
+      title: "Маркетингові дослідження",
+      description: "Глибокий аналіз ринку та цільової аудиторії",
+      icon: <BarChart3 className="w-8 h-8" />
+    },
+    {
+      title: "Стратегічне планування",
+      description: "Розробка довгострокової маркетингової стратегії",
+      icon: <Target className="w-8 h-8" />
+    },
+    {
+      title: "Digital маркетинг",
+      description: "Просування в онлайн каналах та соціальних мережах",
+      icon: <Megaphone className="w-8 h-8" />
+    },
+    {
+      title: "Брендинг",
+      description: "Створення та розвиток бренду компанії",
+      icon: <TrendingUp className="w-8 h-8" />
+    },
+    {
+      title: "Консалтинг",
+      description: "Експертні поради з маркетингових питань",
+      icon: <Users className="w-8 h-8" />
     }
   ];
 
