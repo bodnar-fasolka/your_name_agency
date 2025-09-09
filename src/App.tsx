@@ -4,6 +4,10 @@ import { LanguageProvider } from './contexts/LanguageContext';
 
 // Lazy load components for better performance
 const Home = lazy(() => import("./pages/Home"));
+const LaunchProduct = lazy(() => import("./pages/LaunchProduct"));
+const AboutUs = lazy(() => import("./pages/AboutUs"));
+const Cases = lazy(() => import("./pages/Cases"));
+const ServicePage = lazy(() => import("./pages/ServicePage"));
 
 // Loading component
 const ComponentLoader = () => (
@@ -20,6 +24,10 @@ function App() {
           <Suspense fallback={<ComponentLoader />}>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/launch-product" element={<LaunchProduct />} />
+              <Route path="/about" element={<AboutUs />} />
+              <Route path="/services" element={<ServicePage />} />
+              <Route path="/cases" element={<Cases />} />
             </Routes>
           </Suspense>
         </div>
