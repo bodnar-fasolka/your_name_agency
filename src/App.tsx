@@ -4,6 +4,7 @@ import { LanguageProvider } from './contexts/LanguageContext';
 
 // Lazy load components for better performance
 const Home = lazy(() => import("./pages/Home"));
+const LaunchProduct = lazy(() => import("./pages/LaunchProduct"));
 
 // Loading component
 const ComponentLoader = () => (
@@ -20,6 +21,7 @@ function App() {
           <Suspense fallback={<ComponentLoader />}>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/launch-product" element={<LaunchProduct />} />
             </Routes>
           </Suspense>
         </div>
