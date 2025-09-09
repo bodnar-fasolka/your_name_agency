@@ -1,14 +1,32 @@
-// Simple test version to debug white screen
+import { useState, useEffect } from 'react';
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import ServicesSection from "../components/ServicesSection";
+import Loader from "../components/Loader";
+
 const Home = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Hide loader after 2 seconds
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="min-h-screen bg-white p-8">
-      <h1 className="text-4xl font-bold text-black">Welcome to Y_N_A</h1>
-      <p className="text-lg text-gray-700 mt-4">
-        This is a test page to check if the site is working.
-      </p>
-      <div className="mt-8 p-4 bg-gray-100 rounded">
-        <p>If you can see this, the basic routing is working!</p>
-      </div>
+    <div className="min-h-screen bg-white">
+      <Loader isVisible={loading} />
+      
+      {!loading && (
+        <>
+          <Header />
+          <Hero />
+          <ServicesSection />
+        </>
+      )}
     </div>
   );
 };
