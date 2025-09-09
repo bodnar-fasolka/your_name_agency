@@ -15,6 +15,7 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 const Cases = lazy(() => import('./pages/Cases'));
 const CaseFourface = lazy(() => import('./pages/CaseFourface'));
 const Case4Face = lazy(() => import('./pages/Case4Face'));
+const LaunchProduct = lazy(() => import('./pages/LaunchProduct'));
 
 // Loading component
 const PageLoader = () => (
@@ -49,6 +50,11 @@ const App = () => (
                 <Route path="/cases" element={<Cases />} />
                 <Route path="/cases/4face" element={<CaseFourface />} />
                 <Route path="/case/4face" element={<Case4Face />} />
+                <Route path="/launch-product" element={
+                  <Suspense fallback={<PageLoader />}>
+                    <LaunchProduct />
+                  </Suspense>
+                } />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
