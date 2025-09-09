@@ -4,17 +4,11 @@ import { LanguageProvider } from './contexts/LanguageContext';
 
 // Lazy load components for better performance
 const Home = lazy(() => import("./pages/Home"));
-const AboutUs = lazy(() => import("./pages/AboutUs"));
-const Cases = lazy(() => import("./pages/Cases"));
-const ServicePage = lazy(() => import("./pages/ServicePage"));
-const LaunchProduct = lazy(() => import("./pages/LaunchProduct"));
-const CaseFourface = lazy(() => import("./pages/CaseFourface"));
-const Case4Face = lazy(() => import("./pages/Case4Face"));
 
 // Loading component
 const ComponentLoader = () => (
-  <div className="min-h-screen flex items-center justify-center">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-black"></div>
+  <div className="min-h-screen flex items-center justify-center bg-white">
+    <div className="text-xl">Loading...</div>
   </div>
 );
 
@@ -26,12 +20,6 @@ function App() {
           <Suspense fallback={<ComponentLoader />}>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/about" element={<AboutUs />} />
-              <Route path="/services" element={<ServicePage />} />
-              <Route path="/launch-product" element={<LaunchProduct />} />
-              <Route path="/cases" element={<Cases />} />
-              <Route path="/case/fourface" element={<CaseFourface />} />
-              <Route path="/case/4face" element={<Case4Face />} />
             </Routes>
           </Suspense>
         </div>
