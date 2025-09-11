@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import ServicesSection from "../components/ServicesSection";
 import HowWeWorkSection from "../components/HowWeWorkSection";
+import FaqSection from "../components/FaqSection";
 import Loader from "../components/Loader";
 
 // Lazy load Portfolio component
@@ -40,6 +41,7 @@ const Home = () => {
             <Portfolio />
           </Suspense>
           <HowWeWorkSection />
+          <FaqSection />
         </>
       )}
     </div>
