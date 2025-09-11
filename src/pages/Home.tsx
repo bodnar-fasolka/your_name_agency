@@ -2,6 +2,7 @@ import { useState, useEffect, Suspense, lazy } from 'react';
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import ServicesSection from "../components/ServicesSection";
+import HowWeWorkSection from "../components/HowWeWorkSection";
 import Loader from "../components/Loader";
 
 // Lazy load Portfolio component
@@ -38,6 +39,7 @@ const Home = () => {
           <Suspense fallback={<ComponentLoader />}>
             <Portfolio />
           </Suspense>
+          <HowWeWorkSection />
         </>
       )}
     </div>
