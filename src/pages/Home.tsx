@@ -6,9 +6,10 @@ import HowWeWorkSection from "../components/HowWeWorkSection";
 import FaqSection from "../components/FaqSection";
 import Loader from "../components/Loader";
 
-// Lazy load Portfolio and Contact components
+// Lazy load Portfolio, Contact, and Footer components
 const Portfolio = lazy(() => import("../components/Portfolio"));
 const Contact = lazy(() => import("../components/Contact"));
+const Footer = lazy(() => import("../components/Footer"));
 
 // Loading component for lazy-loaded sections
 const ComponentLoader = () => (
@@ -45,6 +46,9 @@ const Home = () => {
           <FaqSection />
           <Suspense fallback={<ComponentLoader />}>
             <Contact />
+          </Suspense>
+          <Suspense fallback={<ComponentLoader />}>
+            <Footer />
           </Suspense>
         </>
       )}
