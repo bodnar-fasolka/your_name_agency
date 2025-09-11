@@ -1,8 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense, lazy } from 'react';
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import ServicesSection from "../components/ServicesSection";
 import Loader from "../components/Loader";
+
+// Lazy load Portfolio component
+const Portfolio = lazy(() => import("../components/Portfolio"));
+
+// Loading component for lazy-loaded sections
+const ComponentLoader = () => (
+  <div className="py-8 flex justify-center">
+    <div className="animate-pulse bg-gray-200 h-32 w-full max-w-4xl rounded"></div>
+  </div>
+);
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -25,6 +35,9 @@ const Home = () => {
           <Header />
           <Hero />
           <ServicesSection />
+          <Suspense fallback={<ComponentLoader />}>
+            <Portfolio />
+          </Suspense>
         </>
       )}
     </div>

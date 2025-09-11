@@ -51,60 +51,40 @@ const ServicesSection = () => {
         {/* Service Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => (
-            service.description && service.icon ? (
-              // Regular service cards with description and icon
-              <div
-                key={index}
-                className="p-6 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition-all duration-300"
-                style={{ animationDelay: `${index * 0.1}s` }}
+            <div 
+              key={service.slug}
+              className="relative h-full p-[17px] border-2 border-dashed border-gray-300 bg-gray-100 rounded-[20px] hover:shadow-md transition-shadow duration-300 group flex flex-col"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              {/* Diagonal Arrow - Bottom Right */}
+              <div className="absolute bottom-4 right-4">
+                <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" />
+              </div>
+              
+              {/* Service Title with Right Arrow */}
+              <Link 
+                to={service.slug === "launch-product" ? "/launch-product" : `/services/${service.slug}`}
+                className="block mb-6 group-hover:text-primary transition-colors"
               >
-                <div className="text-primary mb-4">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-foreground">
+                <h3 className="text-lg md:text-xl font-bold text-foreground flex items-center gap-2">
                   {service.title}
+                  <span className="text-base">➔</span>
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
+              </Link>
+              
+              {/* Sub-services - Always underlined */}
+              <div className="space-y-3 flex-grow">
+                {service.subServices?.map((subService) => (
+                  <Link
+                    key={subService.slug}
+                    to={`/services/${service.slug}/${subService.slug}`}
+                    className="block text-muted-foreground underline hover:text-gray-800 transition-colors duration-200 text-sm md:text-base"
+                  >
+                    {subService.name}
+                  </Link>
+                ))}
               </div>
-            ) : (
-              // Dashed border cards with sub-services
-              <div 
-                key={service.slug}
-                className="relative h-full p-[17px] border-2 border-dashed border-gray-300 bg-gray-100 rounded-[20px] hover:shadow-md transition-shadow duration-300 group flex flex-col"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {/* Diagonal Arrow - Bottom Right */}
-                <div className="absolute bottom-4 right-4">
-                  <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" />
-                </div>
-                
-                {/* Service Title with Right Arrow */}
-                <Link 
-                  to={service.slug === "launch-product" ? "/launch-product" : `/services/${service.slug}`}
-                  className="block mb-6 group-hover:text-primary transition-colors"
-                >
-                  <h3 className="text-lg md:text-xl font-bold text-foreground flex items-center gap-2">
-                    {service.title}
-                    <span className="text-base">➔</span>
-                  </h3>
-                </Link>
-                
-                {/* Sub-services - Always underlined */}
-                <div className="space-y-3 flex-grow">
-                  {service.subServices?.map((subService) => (
-                    <Link
-                      key={subService.slug}
-                      to={`/services/${service.slug}/${subService.slug}`}
-                      className="block text-muted-foreground underline hover:text-gray-800 transition-colors duration-200 text-sm md:text-base"
-                    >
-                      {subService.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )
+            </div>
           ))}
         </div>
       </div>
