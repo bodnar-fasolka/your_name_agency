@@ -77,7 +77,7 @@ const ServicesSection = () => {
         
         {/* Service Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          {services.map((service, index) => (
+          {(services ?? []).map((service, index) => (
             service.link ? (
               <Link
                 key={index}
@@ -96,7 +96,7 @@ const ServicesSection = () => {
               </Link>
             ) : (
               <div 
-                key={service.slug}
+                key={index}
                 className="relative h-full p-[17px] border-2 border-dashed border-gray-300 bg-gray-100 rounded-[20px] hover:shadow-md transition-shadow duration-300 group flex flex-col"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -118,10 +118,10 @@ const ServicesSection = () => {
                 
                 {/* Sub-services - Always underlined */}
                 <div className="space-y-3 flex-grow">
-                  {service.subServices.map((subService) => (
+                  {Array.isArray(service.subServices) && service.subServices.map((subService, i) => (
                     <Link
-                      key={subService.slug}
-                      to={`/services/${service.slug}/${subService.slug}`}
+                      key={i}
+                      to={`/services/${service.slug}/${subService.slug || subService.link || ''}`}
                       className="block text-muted-foreground underline hover:text-gray-800 transition-colors duration-200 text-sm md:text-base"
                     >
                       {subService.name}

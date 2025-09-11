@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import ServicesSection from "../components/ServicesSection";
 import Loader from "../components/Loader";
+import ErrorBoundary from '../components/ErrorBoundary';
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -24,7 +25,9 @@ const Home = () => {
         <>
           <Header />
           <Hero />
-          <ServicesSection />
+          <ErrorBoundary>
+            <ServicesSection />
+          </ErrorBoundary>
         </>
       )}
     </div>
