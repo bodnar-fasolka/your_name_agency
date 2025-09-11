@@ -5,6 +5,7 @@ import { LanguageProvider } from './contexts/LanguageContext';
 // Lazy load components for better performance
 const Home = lazy(() => import("./pages/Home"));
 const LaunchProduct = lazy(() => import("./pages/LaunchProductNew"));
+const Research = lazy(() => import("./pages/Research"));
 
 // Loading component
 const ComponentLoader = () => (
@@ -22,6 +23,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/launch-product" element={<LaunchProduct />} />
+              <Route path="/research" element={<Research />} />
             </Routes>
           </Suspense>
         </div>

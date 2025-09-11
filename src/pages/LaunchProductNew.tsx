@@ -95,35 +95,89 @@ const LaunchProduct = () => {
         </div>
       </section>
 
-      {/* Three Elements Section - Cards */}
+      {/* Three Elements Section - Clickable Cards */}
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
           <div className="grid gap-8 md:grid-cols-3">
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-black">
-                Дослідження
-              </h3>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                це можливість подивитися на бізнес очима клієнта. Ми з'ясовуємо, що їх мотивує, які бар'єри заважають купівлі та як ваш продукт може стати саме тим рішенням, яке вони шукали.
-              </p>
+            <div className="relative h-full p-[17px] border-2 border-dashed border-gray-300 bg-gray-100 rounded-[20px] hover:shadow-md transition-shadow duration-300 group flex flex-col">
+              {/* Diagonal Arrow - Bottom Right */}
+              <div className="absolute bottom-4 right-4">
+                <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
+                </svg>
+              </div>
+              
+              {/* Service Title with Right Arrow */}
+              <a 
+                href="/research"
+                className="block mb-6 group-hover:text-primary transition-colors"
+              >
+                <h3 className="text-lg md:text-xl font-bold text-black flex items-center gap-2">
+                  Дослідження
+                  <span className="text-base">➔</span>
+                </h3>
+              </a>
+              
+              {/* Description */}
+              <div className="flex-grow">
+                <p className="text-gray-600 text-sm md:text-base">
+                  це можливість подивитися на бізнес очима клієнта. Ми з'ясовуємо, що їх мотивує, які бар'єри заважають купівлі та як ваш продукт може стати саме тим рішенням, яке вони шукали.
+                </p>
+              </div>
             </div>
             
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-black">
-                Стратегія
-              </h3>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                ми перетворюємо цілі компанії на чіткий покроковий план дій. Так стратегія стає не теорією, а практичним інструментом для зростання бізнесу.
-              </p>
+            <div className="relative h-full p-[17px] border-2 border-dashed border-gray-300 bg-gray-100 rounded-[20px] hover:shadow-md transition-shadow duration-300 group flex flex-col">
+              {/* Diagonal Arrow - Bottom Right */}
+              <div className="absolute bottom-4 right-4">
+                <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
+                </svg>
+              </div>
+              
+              {/* Service Title with Right Arrow */}
+              <a 
+                href="/strategy"
+                className="block mb-6 group-hover:text-primary transition-colors"
+              >
+                <h3 className="text-lg md:text-xl font-bold text-black flex items-center gap-2">
+                  Стратегія
+                  <span className="text-base">➔</span>
+                </h3>
+              </a>
+              
+              {/* Description */}
+              <div className="flex-grow">
+                <p className="text-gray-600 text-sm md:text-base">
+                  ми перетворюємо цілі компанії на чіткий покроковий план дій. Так стратегія стає не теорією, а практичним інструментом для зростання бізнесу.
+                </p>
+              </div>
             </div>
             
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-black">
-                Ведення
-              </h3>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                це системна робота з вашим маркетингом. Ми беремо на себе щоденне управління каналами, щоб стратегія не залишалася на папері, а працювала в реальності.
-              </p>
+            <div className="relative h-full p-[17px] border-2 border-dashed border-gray-300 bg-gray-100 rounded-[20px] hover:shadow-md transition-shadow duration-300 group flex flex-col">
+              {/* Diagonal Arrow - Bottom Right */}
+              <div className="absolute bottom-4 right-4">
+                <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
+                </svg>
+              </div>
+              
+              {/* Service Title with Right Arrow */}
+              <a 
+                href="/management"
+                className="block mb-6 group-hover:text-primary transition-colors"
+              >
+                <h3 className="text-lg md:text-xl font-bold text-black flex items-center gap-2">
+                  Ведення
+                  <span className="text-base">➔</span>
+                </h3>
+              </a>
+              
+              {/* Description */}
+              <div className="flex-grow">
+                <p className="text-gray-600 text-sm md:text-base">
+                  це системна робота з вашим маркетингом. Ми беремо на себе щоденне управління каналами, щоб стратегія не залишалася на папері, а працювала в реальності.
+                </p>
+              </div>
             </div>
           </div>
         </div>
