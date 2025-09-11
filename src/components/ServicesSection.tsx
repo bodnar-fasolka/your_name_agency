@@ -9,13 +9,11 @@ const ServicesSection = () => {
   const services = [
     {
       title: "Запуск продукту",
-      description: "Комплексна стратегія виходу на ринок",
-      icon: <Rocket className="w-8 h-8" />,
-      link: "/launch-product",
+      slug: "launch-product",
       subServices: [
-        { name: "Дослідження", link: "/research" },
-        { name: "Стратегія", link: "/strategy" }, 
-        { name: "Ведення", link: "/management" }
+        { name: "Дослідження", slug: "research" },
+        { name: "Стратегія", slug: "strategy" }, 
+        { name: "Ведення", slug: "management" }
       ]
     },
     {
@@ -76,27 +74,29 @@ const ServicesSection = () => {
         </div>
         
         {/* Service Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          {(services ?? []).map((service, index) => (
-            service.link ? (
-              <Link
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          {services.map((service, index) => (
+            service.description && service.icon ? (
+              // Regular service cards with description and icon
+              <div
                 key={index}
-                to={service.link}
-                className="group p-6 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition-all duration-300 hover:border-primary/20 block"
+                className="p-6 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition-all duration-300"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="text-primary mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-primary mb-4">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-semibold mb-3 text-foreground">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors">
+                <p className="text-muted-foreground leading-relaxed">
                   {service.description}
                 </p>
-              </Link>
+              </div>
             ) : (
+              // Dashed border cards with sub-services
               <div 
-                key={index}
+                key={service.slug}
                 className="relative h-full p-[17px] border-2 border-dashed border-gray-300 bg-gray-100 rounded-[20px] hover:shadow-md transition-shadow duration-300 group flex flex-col"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -107,7 +107,7 @@ const ServicesSection = () => {
                 
                 {/* Service Title with Right Arrow */}
                 <Link 
-                  to={`/services/${service.slug}`}
+                  to={service.slug === "launch-product" ? "/launch-product" : `/services/${service.slug}`}
                   className="block mb-6 group-hover:text-primary transition-colors"
                 >
                   <h3 className="text-lg md:text-xl font-bold text-foreground flex items-center gap-2">
@@ -118,10 +118,10 @@ const ServicesSection = () => {
                 
                 {/* Sub-services - Always underlined */}
                 <div className="space-y-3 flex-grow">
-                  {Array.isArray(service.subServices) && service.subServices.map((subService, i) => (
+                  {service.subServices?.map((subService) => (
                     <Link
-                      key={i}
-                      to={`/services/${service.slug}/${subService.slug || subService.link || ''}`}
+                      key={subService.slug}
+                      to={`/services/${service.slug}/${subService.slug}`}
                       className="block text-muted-foreground underline hover:text-gray-800 transition-colors duration-200 text-sm md:text-base"
                     >
                       {subService.name}
