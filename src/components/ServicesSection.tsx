@@ -77,7 +77,7 @@ const ServicesSection = () => {
                 {service.subServices?.map((subService) => (
                   <Link
                     key={subService.slug}
-                    to={`/services/${service.slug}/${subService.slug}`}
+                    to={service.slug === "launch-product" && subService.slug === "research" ? "/research" : `/services/${service.slug}/${subService.slug}`}
                     className="block text-muted-foreground underline hover:text-gray-800 transition-colors duration-200 text-sm md:text-base"
                   >
                     {subService.name}
