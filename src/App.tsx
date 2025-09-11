@@ -4,7 +4,7 @@ import { LanguageProvider } from './contexts/LanguageContext';
 
 // Lazy load components for better performance
 const Home = lazy(() => import("./pages/Home"));
-const LaunchProduct = lazy(() => import("./pages/LaunchProduct"));
+const LaunchProduct = lazy(() => import("./pages/LaunchProductNew"));
 
 // Loading component
 const ComponentLoader = () => (
