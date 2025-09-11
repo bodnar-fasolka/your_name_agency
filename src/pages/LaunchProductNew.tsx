@@ -95,11 +95,11 @@ const LaunchProduct = () => {
         </div>
       </section>
 
-      {/* Three Elements Section */}
+      {/* Three Elements Section - Cards */}
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
           <div className="grid gap-8 md:grid-cols-3">
-            <div className="text-center md:text-left">
+            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
               <h3 className="text-2xl md:text-3xl font-bold mb-4 text-black">
                 Дослідження
               </h3>
@@ -108,7 +108,7 @@ const LaunchProduct = () => {
               </p>
             </div>
             
-            <div className="text-center md:text-left">
+            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
               <h3 className="text-2xl md:text-3xl font-bold mb-4 text-black">
                 Стратегія
               </h3>
@@ -117,7 +117,7 @@ const LaunchProduct = () => {
               </p>
             </div>
             
-            <div className="text-center md:text-left">
+            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
               <h3 className="text-2xl md:text-3xl font-bold mb-4 text-black">
                 Ведення
               </h3>
@@ -129,40 +129,23 @@ const LaunchProduct = () => {
         </div>
       </section>
 
-      {/* Timeline & Price Section */}
+      {/* Timeline & Price Section - Text Only */}
       <section className="py-16 px-4 bg-gray-50">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-black text-center">
             Терміни реалізації
           </h2>
           
-          <div className="grid gap-8 md:grid-cols-3 mb-12">
-            <div className="bg-white p-6 rounded-lg border border-gray-200 text-center">
-              <h3 className="text-xl font-semibold mb-2 text-black">
-                Дослідження
-              </h3>
-              <p className="text-lg text-gray-700">
-                4–8 тижнів
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg border border-gray-200 text-center">
-              <h3 className="text-xl font-semibold mb-2 text-black">
-                Стратегія
-              </h3>
-              <p className="text-lg text-gray-700">
-                2–4 тижні
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg border border-gray-200 text-center">
-              <h3 className="text-xl font-semibold mb-2 text-black">
-                Ведення (тестування стратегії)
-              </h3>
-              <p className="text-lg text-gray-700">
-                8–10 тижнів
-              </p>
-            </div>
+          <div className="text-center space-y-4 mb-12">
+            <p className="text-xl text-gray-700">
+              <span className="font-semibold text-black">Дослідження</span> — 4–8 тижнів
+            </p>
+            <p className="text-xl text-gray-700">
+              <span className="font-semibold text-black">Стратегія</span> — 2–4 тижні
+            </p>
+            <p className="text-xl text-gray-700">
+              <span className="font-semibold text-black">Ведення (тестування стратегії)</span> — 8–10 тижнів
+            </p>
           </div>
           
           <div className="bg-white p-8 rounded-lg border border-gray-200 text-center max-w-2xl mx-auto">
