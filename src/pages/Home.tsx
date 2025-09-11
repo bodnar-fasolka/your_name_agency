@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
 import Header from "../components/Header";
 import Hero from "../components/Hero";
-import ServicesSection from "../components/ServicesSection";
 import Loader from "../components/Loader";
-import ErrorBoundary from '../components/ErrorBoundary';
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -25,9 +23,6 @@ const Home = () => {
         <>
           <Header />
           <Hero />
-          <ErrorBoundary>
-            <ServicesSection />
-          </ErrorBoundary>
         </>
       )}
     </div>
