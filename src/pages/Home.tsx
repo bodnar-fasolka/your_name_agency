@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Header from "../components/Header";
 import Hero from "../components/Hero";
+import ServicesSection from "../components/ServicesSection";
 import Loader from "../components/Loader";
 
 const Home = () => {
@@ -23,6 +24,7 @@ const Home = () => {
         <>
           <Header />
           <Hero />
+          <ServicesSection />
         </>
       )}
     </div>
