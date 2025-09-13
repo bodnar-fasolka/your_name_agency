@@ -162,6 +162,7 @@ function App() {
               <Route path="/x" element={<X />} />
               <Route path="/threads" element={<Threads />} />
               <Route path="/lead-generation" element={<LeadGeneration />} />
+              <Route path="/seo" element={<SEO />} />
               {/* Fallback route */}
               <Route path="*" element={<div className="min-h-screen flex items-center justify-center"><div className="text-xl">Page not found - <a href="/" className="text-blue-600 underline">Go Home</a></div></div>} />
             </Routes>
