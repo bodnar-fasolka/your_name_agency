@@ -127,22 +127,22 @@ const Research = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-black text-center">
             Процес
           </h2>
-          <div className="grid md:grid-cols-2 gap-6 text-lg text-gray-700">
-            <div className="p-4 border border-gray-200 rounded">
-              <strong className="text-black">1. Спостереження</strong>
-            </div>
-            <div className="p-4 border border-gray-200 rounded">
-              <strong className="text-black">2. 12 глибинних інтервю</strong> із кожною цільовою аудиторією
-            </div>
-            <div className="p-4 border border-gray-200 rounded">
-              <strong className="text-black">3. Кількісне опитування</strong> для підтвердження гіпотез
-            </div>
-            <div className="p-4 border border-gray-200 rounded">
-              <strong className="text-black">4. Бенчмаркінг</strong>
-            </div>
-            <div className="p-4 border border-gray-200 rounded md:col-span-2 text-center">
-              <strong className="text-black">5. Інсайти</strong>
-            </div>
+          <div className="space-y-6 text-lg text-gray-700 max-w-3xl mx-auto">
+            <p>
+              <strong className="text-black">Спостереження</strong>
+            </p>
+            <p>
+              <strong className="text-black">12 глибинних інтервю</strong> із кожною цільовою аудиторією
+            </p>
+            <p>
+              <strong className="text-black">Кількісне опитування</strong> для підтвердження гіпотез
+            </p>
+            <p>
+              <strong className="text-black">Бенчмаркінг</strong>
+            </p>
+            <p>
+              <strong className="text-black">Інсайти</strong>
+            </p>
           </div>
         </div>
       </section>
