@@ -254,7 +254,7 @@ const Management = () => {
               Запланувати консультацію
             </a>
             <p className="text-gray-600">
-              або напишіть нам на email: hello@y-n-a.com
+              або напишіть нам на email: solomijabodnar@gmail.com
             </p>
           </div>
         </div>
