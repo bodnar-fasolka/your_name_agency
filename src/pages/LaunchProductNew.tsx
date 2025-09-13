@@ -109,7 +109,7 @@ const LaunchProduct = () => {
               
               {/* Service Title with Right Arrow */}
               <a 
-                href="/research"
+                href="https://www.your-name.agency/research"
                 className="block mb-6 group-hover:text-primary transition-colors"
               >
                 <h3 className="text-lg md:text-xl font-bold text-black flex items-center gap-2">
