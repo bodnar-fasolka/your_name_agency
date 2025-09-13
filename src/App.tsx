@@ -6,7 +6,7 @@ import { LanguageProvider } from './contexts/LanguageContext';
 const Home = lazy(() => import("./pages/Home"));
 const LaunchProduct = lazy(() => import("./pages/LaunchProductNew"));
 const Research = lazy(() => import("./pages/ResearchFinal"));
-const Strategy = lazy(() => import("./pages/Strategy"));
+const Strategy = lazy(() => import("./pages/StrategyTest"));
 
 // Loading component
 const ComponentLoader = () => (
