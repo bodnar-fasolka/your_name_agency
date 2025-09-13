@@ -10,6 +10,7 @@ import ManagementNew from "./pages/ManagementNew";
 import Facebook from "./pages/Facebook";
 import Instagram from "./pages/Instagram";
 import TikTok from "./pages/TikTok";
+import X from "./pages/X";
 
 // Create simple Strategy component inline
 const Strategy = () => {
