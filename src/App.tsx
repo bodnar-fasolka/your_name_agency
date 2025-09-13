@@ -11,6 +11,7 @@ import Facebook from "./pages/Facebook";
 import Instagram from "./pages/Instagram";
 import TikTok from "./pages/TikTok";
 import X from "./pages/X";
+import Threads from "./pages/Threads";
 
 // Create simple Strategy component inline
 const Strategy = () => {
@@ -109,6 +110,7 @@ function App() {
               <Route path="/instagram" element={<Instagram />} />
               <Route path="/tiktok" element={<TikTok />} />
               <Route path="/x" element={<X />} />
+              <Route path="/threads" element={<Threads />} />
               <Route path="/leadgen" element={<LeadGen />} />
               {/* Fallback route */}
               <Route path="*" element={<div className="min-h-screen flex items-center justify-center"><div className="text-xl">Page not found - <a href="/" className="text-blue-600 underline">Go Home</a></div></div>} />
