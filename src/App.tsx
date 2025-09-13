@@ -15,6 +15,7 @@ import Threads from "./pages/Threads";
 import LeadGeneration from "./pages/LeadGeneration";
 import SEO from "./pages/SEO";
 import PPC from "./pages/PPC";
+import MetaAds from "./pages/MetaAds";
 
 // Create simple Strategy component inline
 const Strategy = () => {
@@ -165,6 +166,7 @@ function App() {
               <Route path="/lead-generation" element={<LeadGeneration />} />
               <Route path="/seo" element={<SEO />} />
               <Route path="/ppc" element={<PPC />} />
+              <Route path="/meta-ads" element={<MetaAds />} />
               {/* Fallback route */}
               <Route path="*" element={<div className="min-h-screen flex items-center justify-center"><div className="text-xl">Page not found - <a href="/" className="text-blue-600 underline">Go Home</a></div></div>} />
             </Routes>
