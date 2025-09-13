@@ -13,6 +13,7 @@ import TikTok from "./pages/TikTok";
 import X from "./pages/X";
 import Threads from "./pages/Threads";
 import LeadGeneration from "./pages/LeadGeneration";
+import SEO from "./pages/SEO";
 
 // Create simple Strategy component inline
 const Strategy = () => {
