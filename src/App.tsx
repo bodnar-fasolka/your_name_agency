@@ -12,6 +12,7 @@ import Instagram from "./pages/Instagram";
 import TikTok from "./pages/TikTok";
 import X from "./pages/X";
 import Threads from "./pages/Threads";
+import LeadGeneration from "./pages/LeadGeneration";
 
 // Create simple Strategy component inline
 const Strategy = () => {
