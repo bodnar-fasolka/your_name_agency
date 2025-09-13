@@ -106,6 +106,7 @@ function App() {
               <Route path="/management" element={<ManagementNew />} />
               <Route path="/facebook" element={<Facebook />} />
               <Route path="/instagram" element={<Instagram />} />
+              <Route path="/tiktok" element={<TikTok />} />
               <Route path="/leadgen" element={<LeadGen />} />
               {/* Fallback route */}
               <Route path="*" element={<div className="min-h-screen flex items-center justify-center"><div className="text-xl">Page not found - <a href="/" className="text-blue-600 underline">Go Home</a></div></div>} />
