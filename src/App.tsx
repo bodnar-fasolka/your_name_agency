@@ -9,6 +9,7 @@ import Research from "./pages/ResearchFinal";
 import ManagementNew from "./pages/ManagementNew";
 import Facebook from "./pages/Facebook";
 import Instagram from "./pages/Instagram";
+import TikTok from "./pages/TikTok";
 
 // Create simple Strategy component inline
 const Strategy = () => {
