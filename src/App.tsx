@@ -6,6 +6,7 @@ import { LanguageProvider } from './contexts/LanguageContext';
 import Home from "./pages/Home";
 import LaunchProduct from "./pages/LaunchProductNew";
 import Research from "./pages/ResearchFinal";
+import ManagementNew from "./pages/ManagementNew";
 
 // Create simple Strategy component inline
 const Strategy = () => {
@@ -76,18 +77,6 @@ const ComponentLoader = () => (
 );
 
 // Create simple placeholder components for other services
-const Management = () => (
-  <div className="min-h-screen bg-white p-8">
-    <header className="mb-8">
-      <a href="/" className="text-xl font-bold text-black hover:text-gray-600">Y_N_A</a>
-    </header>
-    <div className="max-w-4xl mx-auto text-center">
-      <h1 className="text-5xl font-bold text-black mb-8">Ведення</h1>
-      <p className="text-xl text-gray-700">Management page coming soon...</p>
-    </div>
-  </div>
-);
-
 const LeadGen = () => (
   <div className="min-h-screen bg-white p-8">
     <header className="mb-8">
@@ -111,7 +100,7 @@ function App() {
               <Route path="/launch-product" element={<LaunchProduct />} />
               <Route path="/research" element={<Research />} />
               <Route path="/strategy" element={<Strategy />} />
-              <Route path="/management" element={<Management />} />
+              <Route path="/management" element={<ManagementNew />} />
               <Route path="/leadgen" element={<LeadGen />} />
               {/* Fallback route */}
               <Route path="*" element={<div className="min-h-screen flex items-center justify-center"><div className="text-xl">Page not found - <a href="/" className="text-blue-600 underline">Go Home</a></div></div>} />
