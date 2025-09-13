@@ -63,7 +63,7 @@ const ServicesSection = () => {
               
               {/* Service Title with Right Arrow */}
               <Link 
-                to={service.slug === "launch-product" ? "/launch-product" : `/services/${service.slug}`}
+                to={service.slug === "launch-product" ? "/launch-product" : `/${service.slug}`}
                 className="block mb-6 group-hover:text-primary transition-colors"
               >
                 <h3 className="text-lg md:text-xl font-bold text-foreground flex items-center gap-2">
@@ -74,15 +74,37 @@ const ServicesSection = () => {
               
               {/* Sub-services - Always underlined */}
               <div className="space-y-3 flex-grow">
-                {service.subServices?.map((subService) => (
-                  <Link
-                    key={subService.slug}
-                    to={service.slug === "launch-product" && subService.slug === "research" ? "/research" : `/services/${service.slug}/${subService.slug}`}
-                    className="block text-muted-foreground underline hover:text-gray-800 transition-colors duration-200 text-sm md:text-base"
-                  >
-                    {subService.name}
-                  </Link>
-                ))}
+                {service.subServices?.map((subService) => {
+                  // Define correct top-level routes for each service
+                  let linkPath;
+                  if (service.slug === "launch-product") {
+                    switch (subService.slug) {
+                      case "research":
+                        linkPath = "/research";
+                        break;
+                      case "strategy":
+                        linkPath = "/strategy";
+                        break;
+                      case "management":
+                        linkPath = "/management";
+                        break;
+                      default:
+                        linkPath = `/${subService.slug}`;
+                    }
+                  } else {
+                    linkPath = `/${subService.slug}`;
+                  }
+
+                  return (
+                    <Link
+                      key={subService.slug}
+                      to={linkPath}
+                      className="block text-muted-foreground underline hover:text-gray-800 transition-colors duration-200 text-sm md:text-base"
+                    >
+                      {subService.name}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           ))}
