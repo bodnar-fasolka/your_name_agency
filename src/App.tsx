@@ -106,6 +106,7 @@ function App() {
               <Route path="/x" element={<X />} />
               <Route path="/threads" element={<Threads />} />
               <Route path="/lead-generation" element={<LeadGeneration />} />
+              <Route path="/leadgen" element={<LeadGeneration />} />
               <Route path="/seo" element={<SEO />} />
               <Route path="/ppc" element={<PPC />} />
               <Route path="/meta-ads" element={<MetaAds />} />
