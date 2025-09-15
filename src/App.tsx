@@ -19,6 +19,7 @@ import MetaAds from "./pages/MetaAds";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Cases from "./pages/Cases";
+import FourFaceCase from "./pages/FourFaceCase";
 
 // Create simple Strategy component inline
 // (removed duplicate declaration)
@@ -102,6 +103,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
               <Route path="/cases" element={<Cases />} />
+              <Route path="/case/4face" element={<FourFaceCase />} />
               <Route path="/launch-product" element={<LaunchProduct />} />
               <Route path="/research" element={<Research />} />
               <Route path="/strategy" element={<Strategy />} />
