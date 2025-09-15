@@ -54,8 +54,13 @@ const Cases = () => {
           <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
             {/* Portfolio Card 1 - serpano.k */}
             <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-48 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/PICTURE_SERPANOK_Case)' }}>
-                <div className="h-full bg-gradient-to-br from-blue-500/50 to-purple-600/50"></div>
+              <div 
+                className="h-48 bg-cover bg-center bg-no-repeat relative"
+                style={{ 
+                  backgroundImage: 'url("/PICTURE_SERPANOK_Case.jpg"), url("/PICTURE_SERPANOK_Case.png"), url("/PICTURE_SERPANOK_Case.webp"), linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)'
+                }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-600/30"></div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-black mb-2">serpano.k</h3>
@@ -69,8 +74,13 @@ const Cases = () => {
 
             {/* Portfolio Card 2 - 4face */}
             <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-48 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/PICTURE_4FACE_Case)' }}>
-                <div className="h-full bg-gradient-to-br from-green-500/50 to-teal-600/50"></div>
+              <div 
+                className="h-48 bg-cover bg-center bg-no-repeat relative"
+                style={{ 
+                  backgroundImage: 'url("/PICTURE_4FACE_Case.jpg"), url("/PICTURE_4FACE_Case.png"), url("/PICTURE_4FACE_Case.webp"), linear-gradient(135deg, #10b981 0%, #0891b2 100%)'
+                }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-green-500/30 to-teal-600/30"></div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-black mb-2">4face</h3>
