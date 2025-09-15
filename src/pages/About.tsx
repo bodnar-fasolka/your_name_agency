@@ -37,15 +37,49 @@ const About = () => {
         </div>
       </header>
 
-      {/* Section 1 - Наша Місія */}
-      <section className="pt-32 pb-16 px-4 bg-white">
+      {/* Section 1 - Hero (Copy from Home) */}
+      <section className="pt-32 pb-0 px-4 bg-white">
         <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-black leading-tight">
-            Наша Місія
-          </h1>
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
-            стати GPS-навігацією для брендів у пошуку своєї аудиторії, обираючи найкоротший шлях до реального результату.
-          </p>
+          <div className="fade-in">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 text-black leading-tight">
+              About
+            </h1>
+            
+            <p className="text-lg md:text-xl text-gray-600 mb-6 md:mb-8 max-w-2xl mx-auto font-light text-center">
+              Дізнайтеся більше про нашу команду та підхід
+            </p>
+            
+            <div className="w-full max-w-2xl mx-auto mb-6 md:mb-10">
+              <a 
+                href="https://calendly.com/bodnar-solomiya-v/30min?month=2025-08" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block w-full px-8 py-3 text-base bg-black text-white rounded-md hover:bg-gray-800 transition-colors font-medium"
+              >
+                Запланувати консультацію
+              </a>
+              
+              <p className="text-center text-lg text-gray-700 mt-4 md:mt-6 max-w-xs md:max-w-xl mx-auto">
+                Познайомтеся з нашою командою
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        {/* Cat Movement Animation */}
+        <div className="flex justify-center">
+          <div className="max-w-xs">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-auto rounded-lg"
+            >
+              <source src="/Cat Movement.webm" type="video/webm" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </section>
 
