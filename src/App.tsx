@@ -17,6 +17,7 @@ import SEO from "./pages/SEO";
 import PPC from "./pages/PPC";
 import MetaAds from "./pages/MetaAds";
 import About from "./pages/About";
+import Services from "./pages/Services";
 
 // Create simple Strategy component inline
 // (removed duplicate declaration)
@@ -98,6 +99,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
               <Route path="/launch-product" element={<LaunchProduct />} />
               <Route path="/research" element={<Research />} />
               <Route path="/strategy" element={<Strategy />} />
