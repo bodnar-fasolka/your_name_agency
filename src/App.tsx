@@ -104,8 +104,8 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
               <Route path="/cases" element={<Cases />} />
-              <Route path="/case/4face" element={<FourFaceCase />} />
-              <Route path="/case/serpano" element={<SerpanoCase />} />
+              <Route path="/cases/4face" element={<FourFaceCase />} />
+              <Route path="/cases/serpano" element={<SerpanoCase />} />
               <Route path="/launch-product" element={<LaunchProduct />} />
               <Route path="/research" element={<Research />} />
               <Route path="/strategy" element={<Strategy />} />
