@@ -158,50 +158,54 @@ const Cases = () => {
           </div>
         </section>
 
-        {/* Section 2 - Кейси (2 Real Cases) */}
+        {/* Section 2 - Кейси (2 Existing Cases) */}
         <section className="py-16 px-4 bg-gray-50">
           <div className="container mx-auto max-w-6xl">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-black">
               Кейси
             </h2>
             
-            {/* Cases Grid - 2 Real Cases */}
+            {/* Cases Grid - 2 Existing Cases */}
             <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
-              {/* Case 1 - Запуск SaaS продукту */}
+              {/* Case 1 - serpano.k */}
               <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600"></div>
+                <div className="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
+                  <span className="text-white text-2xl font-bold">serpano.k</span>
+                </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-black mb-3">Запуск SaaS продукту</h3>
+                  <h3 className="text-xl font-semibold text-black mb-3">serpano.k</h3>
                   <p className="text-gray-700 mb-4">
-                    Збільшення конверсії на 300% та залучення 10,000+ користувачів за 6 місяців через комплексну маркетингову стратегію.
+                    Комплексна стратегія розвитку особистого бренду та збільшення охоплення у соціальних мережах.
                   </p>
                   <div className="flex justify-between text-sm text-gray-600 mb-4">
-                    <span>B2B SaaS</span>
+                    <span>Personal Brand</span>
                     <span>6 місяців</span>
                   </div>
                   <div className="pt-4 border-t border-gray-200">
                     <p className="text-sm text-gray-600">
-                      <strong className="text-black">Результати:</strong> 300% зростання конверсії, 10K+ нових користувачів
+                      <strong className="text-black">Результати:</strong> Збільшення аудиторії, підвищення залученості
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* Case 2 - Ребрендинг e-commerce */}
+              {/* Case 2 - 4face */}
               <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                <div className="h-48 bg-gradient-to-br from-green-500 to-teal-600"></div>
+                <div className="h-48 bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center">
+                  <span className="text-white text-2xl font-bold">4face</span>
+                </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-black mb-3">Ребрендинг e-commerce</h3>
+                  <h3 className="text-xl font-semibold text-black mb-3">4face</h3>
                   <p className="text-gray-700 mb-4">
-                    Зростання продажів на 250% та підвищення впізнаваності бренду в 5 разів через повний ребрендинг і маркетингову стратегію.
+                    Розробка бренд-стратегії та запуск маркетингових кампаній для інноваційного продукту.
                   </p>
                   <div className="flex justify-between text-sm text-gray-600 mb-4">
-                    <span>E-commerce</span>
+                    <span>Product Launch</span>
                     <span>4 місяці</span>
                   </div>
                   <div className="pt-4 border-t border-gray-200">
                     <p className="text-sm text-gray-600">
-                      <strong className="text-black">Результати:</strong> 250% зростання продажів, 5x впізнаваність бренду
+                      <strong className="text-black">Результати:</strong> Успішний запуск продукту, зростання продажів
                     </p>
                   </div>
                 </div>
