@@ -16,6 +16,7 @@ import LeadGeneration from "./pages/LeadGeneration";
 import SEO from "./pages/SEO";
 import PPC from "./pages/PPC";
 import MetaAds from "./pages/MetaAds";
+import About from "./pages/About";
 
 // Create simple Strategy component inline
 // (removed duplicate declaration)
@@ -96,6 +97,7 @@ function App() {
           <Suspense fallback={<ComponentLoader />}>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
               <Route path="/launch-product" element={<LaunchProduct />} />
               <Route path="/research" element={<Research />} />
               <Route path="/strategy" element={<Strategy />} />
