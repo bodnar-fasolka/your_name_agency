@@ -1,9 +1,19 @@
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Cases = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
   const cases = [
     {
       id: 'fourface',
@@ -52,6 +62,14 @@ const Cases = () => {
     }
   };
 
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-white">
+        <div className="text-xl text-black">Loading...</div>
+      </div>
+    );
+  }
+
   return (
     <>
       <Helmet>
@@ -76,106 +94,111 @@ const Cases = () => {
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
-      <div className="min-h-screen bg-background">
-        {/* Navigation */}
-        <nav className="py-6 px-4 border-b border-border">
-          <div className="container mx-auto max-w-6xl">
-            <Link 
-              to="/" 
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <ArrowLeft size={16} />
-              На головну
-            </Link>
+      <div className="min-h-screen bg-white">
+        {/* Header */}
+        <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center justify-between h-16">
+              <a href="/" className="text-xl font-bold text-black hover:text-gray-600 transition-colors">
+                Y_N_A
+              </a>
+              <nav className="hidden md:flex items-center space-x-8">
+                <a href="/" className="text-sm font-medium text-gray-600 hover:text-black transition-colors">home</a>
+                <a href="/about" className="text-sm font-medium text-gray-600 hover:text-black transition-colors">about</a>
+                <a href="/services" className="text-sm font-medium text-gray-600 hover:text-black transition-colors">services</a>
+                <a href="/cases" className="text-sm font-medium text-black">cases</a>
+              </nav>
+            </div>
           </div>
-        </nav>
+        </header>
 
-        {/* Main Content */}
-        <main className="py-16 px-4">
-          <div className="container mx-auto max-w-6xl">
-            {/* Hero Section */}
-            <header className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
-                Кейси та Портфоліо
+        {/* Section 1 - Hero (Copy from Home) */}
+        <section className="pt-32 pb-0 px-4 bg-white">
+          <div className="container mx-auto max-w-4xl text-center">
+            <div className="fade-in">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 text-black leading-tight">
+                Кейси
               </h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Конкретні результати наших клієнтів: від дослідження до впровадження стратегій. 
-                Кожен кейс — це історія про те, як правильний підхід змінює бізнес.
+              
+              <p className="text-lg md:text-xl text-gray-600 mb-6 md:mb-8 max-w-2xl mx-auto font-light text-center">
+                Реальні результати наших клієнтів
               </p>
-            </header>
-
-            {/* Cases Grid */}
-            <section className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
-              {cases.map((caseItem, index) => (
-                <article 
-                  key={caseItem.id}
-                  className="group p-8 border border-border rounded-lg hover:shadow-lg transition-all duration-300 hover:border-foreground/20 bg-card"
+              
+              <div className="w-full max-w-2xl mx-auto mb-6 md:mb-10">
+                <a 
+                  href="https://calendly.com/bodnar-solomiya-v/30min?month=2025-08" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block w-full px-8 py-3 text-base bg-black text-white rounded-md hover:bg-gray-800 transition-colors font-medium"
                 >
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {caseItem.tags.map((tag) => (
-                      <span 
-                        key={tag}
-                        className="px-3 py-1 text-xs bg-muted text-muted-foreground rounded-full"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Title & Subtitle */}
-                  <h2 className="text-2xl font-semibold mb-2 text-foreground group-hover:text-primary transition-colors">
-                    {caseItem.title}
-                  </h2>
-                  <h3 className="text-lg text-muted-foreground mb-4 leading-relaxed">
-                    {caseItem.subtitle}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    {caseItem.description}
-                  </p>
-
-                  {/* Results */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-medium text-foreground mb-3">Ключові результати:</h4>
-                    <ul className="space-y-2">
-                      {caseItem.results.map((result) => (
-                        <li key={result} className="text-sm text-muted-foreground flex items-center gap-2">
-                          <span className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></span>
-                          {result}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* CTA */}
-                  <Button variant="outline" asChild className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                    <Link to={caseItem.link} className="inline-flex items-center justify-center gap-2">
-                      Читати кейс
-                      <ArrowRight size={16} />
-                    </Link>
-                  </Button>
-                </article>
-              ))}
-            </section>
-
-            {/* Bottom CTA */}
-            <section className="text-center py-16 border-t border-border">
-              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-foreground">
-                Готові обговорити ваш проєкт?
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Кожен успішний кейс починається з розмови. Розкажіть нам про ваші виклики — знайдемо рішення.
-              </p>
-              <Button size="lg" asChild className="px-8 py-3">
-                <Link to="/#contact">
-                  Почати співпрацю
-                </Link>
-              </Button>
-            </section>
+                  Запланувати консультацію
+                </a>
+                
+                <p className="text-center text-lg text-gray-700 mt-4 md:mt-6 max-w-xs md:max-w-xl mx-auto">
+                  Подивіться на наші успішні проєкти
+                </p>
+              </div>
+            </div>
           </div>
-        </main>
+          
+          {/* Cat Movement Animation */}
+          <div className="flex justify-center">
+            <div className="max-w-xs">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-auto rounded-lg"
+              >
+                <source src="/Cat Movement.webm" type="video/webm" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 2 - Кейси (Cases from Portfolio Component) */}
+        <section className="py-16 px-4 bg-gray-50">
+          <div className="container mx-auto max-w-6xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-black">
+              Кейси
+            </h2>
+            
+            {/* Cases Grid - Copy from Portfolio component */}
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {cases.map((caseItem) => (
+                <div key={caseItem.id} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                  <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600"></div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-black mb-2">{caseItem.title}</h3>
+                    <p className="text-gray-600 mb-4">{caseItem.description}</p>
+                    <div className="flex justify-between text-sm text-gray-500">
+                      <span>2024</span>
+                      <span>{caseItem.tags.join(', ')}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="bg-black text-white py-8 px-4">
+          <div className="container mx-auto max-w-6xl text-center">
+            <div className="mb-4">
+              <h3 className="text-xl font-bold mb-2">Y_N_A</h3>
+              <p className="text-gray-400">Маркетингове агентство</p>
+            </div>
+            <div className="flex justify-center space-x-6 mb-4">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">Instagram</a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">Facebook</a>
+            </div>
+            <p className="text-gray-400 text-sm">© 2024 Y_N_A. All rights reserved.</p>
+          </div>
+        </footer>
       </div>
     </>
   );
