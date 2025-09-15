@@ -54,7 +54,9 @@ const Cases = () => {
           <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
             {/* Portfolio Card 1 - serpano.k */}
             <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600"></div>
+              <div className="h-48 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/PICTURE_SERPANOK_Case)' }}>
+                <div className="h-full bg-gradient-to-br from-blue-500/50 to-purple-600/50"></div>
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-black mb-2">serpano.k</h3>
                 <p className="text-gray-600 mb-4">Personal brand development and social media strategy</p>
@@ -67,7 +69,9 @@ const Cases = () => {
 
             {/* Portfolio Card 2 - 4face */}
             <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-green-500 to-teal-600"></div>
+              <div className="h-48 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/PICTURE_4FACE_Case)' }}>
+                <div className="h-full bg-gradient-to-br from-green-500/50 to-teal-600/50"></div>
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-black mb-2">4face</h3>
                 <p className="text-gray-600 mb-4">Product launch strategy and brand development</p>
