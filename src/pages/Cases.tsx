@@ -158,28 +158,69 @@ const Cases = () => {
           </div>
         </section>
 
-        {/* Section 2 - Кейси (Cases from Portfolio Component) */}
+        {/* Section 2 - Кейси (2 Real Cases) */}
         <section className="py-16 px-4 bg-gray-50">
           <div className="container mx-auto max-w-6xl">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-black">
               Кейси
             </h2>
             
-            {/* Cases Grid - Copy from Portfolio component */}
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {cases.map((caseItem) => (
-                <div key={caseItem.id} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                  <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600"></div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-black mb-2">{caseItem.title}</h3>
-                    <p className="text-gray-600 mb-4">{caseItem.description}</p>
-                    <div className="flex justify-between text-sm text-gray-500">
-                      <span>2024</span>
-                      <span>{caseItem.tags.join(', ')}</span>
-                    </div>
+            {/* Cases Grid - 2 Real Cases */}
+            <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
+              {/* Case 1 - Запуск SaaS продукту */}
+              <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600"></div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-black mb-3">Запуск SaaS продукту</h3>
+                  <p className="text-gray-700 mb-4">
+                    Збільшення конверсії на 300% та залучення 10,000+ користувачів за 6 місяців через комплексну маркетингову стратегію.
+                  </p>
+                  <div className="flex justify-between text-sm text-gray-600 mb-4">
+                    <span>B2B SaaS</span>
+                    <span>6 місяців</span>
+                  </div>
+                  <div className="pt-4 border-t border-gray-200">
+                    <p className="text-sm text-gray-600">
+                      <strong className="text-black">Результати:</strong> 300% зростання конверсії, 10K+ нових користувачів
+                    </p>
                   </div>
                 </div>
-              ))}
+              </div>
+
+              {/* Case 2 - Ребрендинг e-commerce */}
+              <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div className="h-48 bg-gradient-to-br from-green-500 to-teal-600"></div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-black mb-3">Ребрендинг e-commerce</h3>
+                  <p className="text-gray-700 mb-4">
+                    Зростання продажів на 250% та підвищення впізнаваності бренду в 5 разів через повний ребрендинг і маркетингову стратегію.
+                  </p>
+                  <div className="flex justify-between text-sm text-gray-600 mb-4">
+                    <span>E-commerce</span>
+                    <span>4 місяці</span>
+                  </div>
+                  <div className="pt-4 border-t border-gray-200">
+                    <p className="text-sm text-gray-600">
+                      <strong className="text-black">Результати:</strong> 250% зростання продажів, 5x впізнаваність бренду
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Section */}
+            <div className="text-center mt-12">
+              <p className="text-lg text-gray-700 mb-6">
+                Хочете отримати такі ж результати для вашого бізнесу?
+              </p>
+              <a 
+                href="https://calendly.com/bodnar-solomiya-v/30min?month=2025-08" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block px-8 py-3 text-base bg-black text-white rounded-md hover:bg-gray-800 transition-colors font-medium"
+              >
+                Обговорити ваш проєкт
+              </a>
             </div>
           </div>
         </section>
