@@ -51,8 +51,8 @@ const Cases = () => {
             Наші проєкти
           </h2>
           
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {/* Portfolio Card 1 */}
+          <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
+            {/* Portfolio Card 1 - serpano.k */}
             <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600"></div>
               <div className="p-6">
@@ -65,7 +65,7 @@ const Cases = () => {
               </div>
             </div>
 
-            {/* Portfolio Card 2 */}
+            {/* Portfolio Card 2 - 4face */}
             <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="h-48 bg-gradient-to-br from-green-500 to-teal-600"></div>
               <div className="p-6">
@@ -74,58 +74,6 @@ const Cases = () => {
                 <div className="flex justify-between text-sm text-gray-500">
                   <span>2024</span>
                   <span>Product Launch</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Portfolio Card 3 */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-orange-500 to-red-600"></div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-black mb-2">Проєкт 3</h3>
-                <p className="text-gray-600 mb-4">Опис проєкту та досягнутих результатів</p>
-                <div className="flex justify-between text-sm text-gray-500">
-                  <span>2024</span>
-                  <span>Marketing</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Portfolio Card 4 */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-pink-500 to-rose-600"></div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-black mb-2">Проєкт 4</h3>
-                <p className="text-gray-600 mb-4">Опис проєкту та досягнутих результатів</p>
-                <div className="flex justify-between text-sm text-gray-500">
-                  <span>2024</span>
-                  <span>E-commerce</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Portfolio Card 5 */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-indigo-500 to-blue-600"></div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-black mb-2">Проєкт 5</h3>
-                <p className="text-gray-600 mb-4">Опис проєкту та досягнутих результатів</p>
-                <div className="flex justify-between text-sm text-gray-500">
-                  <span>2024</span>
-                  <span>SaaS</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Portfolio Card 6 */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-yellow-500 to-orange-600"></div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-black mb-2">Проєкт 6</h3>
-                <p className="text-gray-600 mb-4">Опис проєкту та досягнутих результатів</p>
-                <div className="flex justify-between text-sm text-gray-500">
-                  <span>2024</span>
-                  <span>Mobile App</span>
                 </div>
               </div>
             </div>
